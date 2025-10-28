@@ -98,3 +98,65 @@ Please email thomas@tsmithcode.ai with:
 This repository is NOT open source. 
 All rights reserved © 2025 Thomas Smith / TSmithCode.ai.
 See LICENSE.txt for terms.
+
+Absolutely. Here’s the full breakdown as 4 separate markdown tables, one per Phase (matching your 100-snippet library organization):
+
+⸻
+
+📘 Phase 1 – Core Automation Primitives
+
+Reflection, LINQ, JSON, and Dependency Injection
+
+| Category               | Snippet Count | Highlights                                      |
+|------------------------|---------------|--------------------------------------------------|
+| Reflection & Generics  | 10            | `CreateByName`, `SetProp`, `MapProps`, `MakeGeneric` |
+| LINQ + Collections     | 8             | `GroupByKey`, `SafeToDictionary`, `ZipToTuple`  |
+| JSON & Dictionary      | 4             | `ToJson`, `ToDictionary`, `MergeDictionaries`   |
+| Dependency Injection   | 3             | `RegisterAll`, `AddSingletonByType`             |
+
+
+⸻
+
+📗 Phase 2 – Async, Minimal API, Memory & Logging
+
+Build fast apps with async, minimal surface area, and max observability
+
+| Category               | Snippet Count | Highlights                                          |
+|------------------------|---------------|------------------------------------------------------|
+| Async Pipelines        | 5             | `RetryAsync`, `FireAndForget`, `Delay + Cancellation` |
+| Minimal API            | 5             | `MapGet`, `MapPost`, `EnableSwagger`, `Problem()`     |
+| Span & Memory          | 5             | `FastSplit`, `RentBuffer`, `SpanToString`             |
+| Errors & Logging       | 10            | `TryWrap`, `LogJson`, `Time()`, `ExceptionDetails`    |
+
+
+⸻
+
+📙 Phase 3 – Code Gen, CLI, Auth, and IO
+
+Everything you need for automation tools, secure pipelines, and code-first development
+
+| Category               | Snippet Count | Highlights                                            |
+|------------------------|---------------|--------------------------------------------------------|
+| Expression Trees       | 5             | `BuildPredicate`, `OrderByProp`, `CreateGetter`        |
+| Source Gen Simulations | 5             | `InjectCode`, `GenerateCodeTemplate`, `MapUsingRegistry` |
+| CLI Utilities          | 5             | `WriteColor`, `DrawBox`, `WriteError`, `Confirm()`     |
+| Auth & Security        | 5             | `Sha256`, `SecureToken`, `ToBase64`, `CheckPassword`   |
+| Files & Streams        | 5             | `WriteLines`, `ReadStreamAsync`, `WriteTextAsync`      |
+
+
+⸻
+
+📕 Phase 4 – Parsing, Validation, Config, and Caching
+
+Enterprise-ready helpers for data reliability, governance, and system control
+
+| Category               | Snippet Count | Highlights                                      |
+|------------------------|---------------|--------------------------------------------------|
+| Parsing & Conversion   | 5             | `ParseIntSafe`, `ParseCsvLine`, `ToQueryString` |
+| Enum & Attribute Tools | 5             | `GetEnumDescription`, `HasAttribute()`          |
+| Data Validation        | 5             | `IsValid`, `MustBePresent`, `TrimAllStrings`    |
+| Config & Env Vars      | 5             | `GetEnv`, `LoadEnvFile`, `CurrentEnv()`         |
+| Meta & Caching         | 5             | `Memoize`, `InCache`, `ClearAllCache()`         |
+
+
+⸻
