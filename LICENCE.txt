@@ -1,0 +1,10 @@
+Copyright (c) 2025 Thomas Smith / TSmithCode.ai
+
+All rights reserved.
+
+This source code is proprietary and confidential. 
+It is provided for demonstration, educational, and portfolio purposes only. 
+Reproduction, modification, or distribution without express written permission from the author is strictly prohibited.
+
+Use of this software in commercial or non-commercial products, libraries, services, or derivative works 
+requires a license agreement with the author (contact: thomas@tsmithcode.ai).
