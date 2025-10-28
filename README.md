@@ -5,7 +5,7 @@
 
 A practical, battle-ready utility library to accelerate development velocity across APIs, CLI, Blazor, WinForms, and everything in between.
 
-![1M Consultant Promo](./tsmithcode_banner.png)
+![1M Consultant Promo](./44335D96-1BB8-4EC4-B5A7-EED8265C0D97.png)
 
 ## 🧠 About This Repo
 
