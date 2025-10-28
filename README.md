@@ -66,7 +66,7 @@ Submit new snippets, improvements, or ideas as PRs or open an issue.
 📜 License
 ## Want to use these snippets?
 
-Please email thomas@tsmithcode.ai with:
+Please email tsmithcad@gmail.com or contact www.tsmithcode.ai with:
 - Name of company/project
 - Intended use
 - License duration (1-time, recurring, embedded, etc.)
