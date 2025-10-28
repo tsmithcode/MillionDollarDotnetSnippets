@@ -5,6 +5,8 @@
 
 A practical, battle-ready utility library to accelerate development velocity across APIs, CLI, Blazor, WinForms, and everything in between.
 
+![1M Consultant Promo](./tsmithcode_banner.png)
+
 ## 🧠 About This Repo
 
 This is a hand-crafted, high-performance utility library designed to compress weeks of .NET 8 development into hours.  
