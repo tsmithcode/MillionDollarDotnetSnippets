@@ -1,10 +1,9 @@
-# 💼 MillionDollarDotnetSippets
-A practical, battle-ready utility library to accelerate development velocity across APIs, CLI, Blazor, WinForms, and everything in between.
-
-## 💼 100 Code Snippets for the $1M .NET 8 Consultant
+# 💼 100 Code Snippets for the $1M .NET 8 Consultant
 
 > Build in hours what others build in weeks.  
 > This repo is your unfair advantage.
+
+A practical, battle-ready utility library to accelerate development velocity across APIs, CLI, Blazor, WinForms, and everything in between.
 
 ## 🧠 About This Repo
 
