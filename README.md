@@ -5,6 +5,8 @@ This repo is your unfair advantage.
 
 A practical, battle-tested utility library to accelerate development velocity across APIs, CLI tools, Blazor, WinForms, and everything in between.
 
+![1M Consultant Promo](https://raw.githubusercontent.com/tsmithcode/MillionDollarDotnetSnippets/main/44335D96-1BB8-4EC4-B5A7-EED8265C0D97.png)
+
 ---
 
 ## 📘 Table of Contents – 100 Code Snippets
@@ -45,10 +47,61 @@ These are patterns I deploy to automate CAD systems, ERP workflows, and industri
 
 ---
 
+## 📦 Phase Breakdown – Snippets by Category
+
+### 📘 Phase 1 – Core Automation Primitives
+Reflection, LINQ, JSON, and Dependency Injection
+
+| Category               | Snippet Count | Highlights                                      |
+|------------------------|---------------|--------------------------------------------------|
+| Reflection & Generics  | 10            | `CreateByName`, `SetProp`, `MapProps`, `MakeGeneric` |
+| LINQ + Collections     | 8             | `GroupByKey`, `SafeToDictionary`, `ZipToTuple`  |
+| JSON & Dictionary      | 4             | `ToJson`, `ToDictionary`, `MergeDictionaries`   |
+| Dependency Injection   | 3             | `RegisterAll`, `AddSingletonByType`             |
+
+---
+
+### 📗 Phase 2 – Async, Minimal API, Memory & Logging
+Build fast apps with async, minimal surface area, and max observability
+
+| Category               | Snippet Count | Highlights                                          |
+|------------------------|---------------|------------------------------------------------------|
+| Async Pipelines        | 5             | `RetryAsync`, `FireAndForget`, `Delay + Cancellation` |
+| Minimal API            | 5             | `MapGet`, `MapPost`, `EnableSwagger`, `Problem()`     |
+| Span & Memory          | 5             | `FastSplit`, `RentBuffer`, `SpanToString`             |
+| Errors & Logging       | 10            | `TryWrap`, `LogJson`, `Time()`, `ExceptionDetails`    |
+
+---
+
+### 📙 Phase 3 – Code Gen, CLI, Auth, and IO
+Automation tools, secure pipelines, and code-first development
+
+| Category               | Snippet Count | Highlights                                            |
+|------------------------|---------------|--------------------------------------------------------|
+| Expression Trees       | 5             | `BuildPredicate`, `OrderByProp`, `CreateGetter`        |
+| Source Gen Simulations | 5             | `InjectCode`, `GenerateCodeTemplate`, `MapUsingRegistry` |
+| CLI Utilities          | 5             | `WriteColor`, `DrawBox`, `WriteError`, `Confirm()`     |
+| Auth & Security        | 5             | `Sha256`, `SecureToken`, `ToBase64`, `CheckPassword`   |
+| Files & Streams        | 5             | `WriteLines`, `ReadStreamAsync`, `WriteTextAsync`      |
+
+---
+
+### 📕 Phase 4 – Parsing, Validation, Config, and Caching
+Enterprise-ready helpers for data reliability, governance, and system control
+
+| Category               | Snippet Count | Highlights                                      |
+|------------------------|---------------|--------------------------------------------------|
+| Parsing & Conversion   | 5             | `ParseIntSafe`, `ParseCsvLine`, `ToQueryString` |
+| Enum & Attribute Tools | 5             | `GetEnumDescription`, `HasAttribute()`          |
+| Data Validation        | 5             | `IsValid`, `MustBePresent`, `TrimAllStrings`    |
+| Config & Env Vars      | 5             | `GetEnv`, `LoadEnvFile`, `CurrentEnv()`         |
+| Meta & Caching         | 5             | `Memoize`, `InCache`, `ClearAllCache()`         |
+
+---
+
 ## 🧠 About This Repo
 
-This repo is built for **velocity**, not complexity.
-
+This repo is built for **velocity**, not complexity.  
 Designed for consultants, leads, and solution architects who solve high-leverage problems with elegance.
 
 - ✳️ Build internal tools in hours  
@@ -61,18 +114,10 @@ It’s leverage.
 
 ---
 
-## 🧩 ROI by Category
-
-> See how each group of snippets accelerates your CAD dev workflows:  
-[**View Full Mapping →**](./snippet_category_impact_mapping.md)
-
----
-
 ## 👑 Author
 
-Built by **Thomas Smith**, a .NET 8 Solutions Architect & CAD automation specialist.
-
-I've helped Fortune 500s and fast-growing startups reduce delivery timelines by **90%+** through modular C# architecture and clean software engineering practices.
+Built by **Thomas Smith**, a .NET 8 Solutions Architect & CAD automation specialist.  
+Helping Fortune 500s and fast-growing startups reduce delivery timelines by **90%+** through modular C# architecture.
 
 - 🔩 CAD + Autodesk Vault + SolidWorks Automation  
 - 💼 ERP/CRM Integration (Epicor, SugarCRM, Windchill)  
@@ -104,3 +149,6 @@ Please include:
 
 © 2025 Thomas Smith / TSmithCode.ai. All rights reserved.  
 See `LICENSE.txt` for full terms.
+
+
+⸻
