@@ -58,23 +58,23 @@ Most devs reinvent the wheel.
 These snippets leverage the .NET Standard Library and patterns already built for scale.
 
 Instead of building your own:
-	•	Object mappers → use MapProps()
-	•	Validation flows → use IsValid()
-	•	Property accessors → use CreateGetter()
-	•	Middleware patterns → use FireAndForget()
-	•	API scaffolds → use MapPost<TIn, TOut>()
-	•	Retry logic → use RetryAsync()
-	•	Inline profiling → use LogTime()
+- Object mappers → use MapProps()
+- Validation flows → use IsValid()
+- Property accessors → use CreateGetter()
+- Middleware patterns → use FireAndForget()
+- API scaffolds → use MapPost<TIn, TOut>()
+- Retry logic → use RetryAsync()
+- Inline profiling → use LogTime()
 
 ⸻
 
 👑 Author
 
 Built by an active .NET Solutions Architect specializing in:
-	•	CAD/ERP/CRM Integration
-	•	Autodesk + SolidWorks API Automation
-	•	Rapid API, Blazor, and CLI tool development
-	•	Enterprise .NET 8 modernization
+- CAD/ERP/CRM Integration
+- Autodesk + SolidWorks API Automation
+- Rapid API, Blazor, and CLI tool development
+- Enterprise .NET 8 modernization
 
 Follow the journey on LinkedIn
 More tools coming soon. Fork, star, or contribute.
