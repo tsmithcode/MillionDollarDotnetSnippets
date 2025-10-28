@@ -1,6 +1,7 @@
+# 💼 MillionDollarDotnetSippets
 A practical, battle-ready utility library to accelerate development velocity across APIs, CLI, Blazor, WinForms, and everything in between.
 
-# 💼 100 Code Snippets for the $1M .NET 8 Consultant
+## 💼 100 Code Snippets for the $1M .NET 8 Consultant
 
 > Build in hours what others build in weeks.  
 > This repo is your unfair advantage.
@@ -27,13 +28,9 @@ It is optimized for:
 ---
 
 ## 🧩 Usage
+Are you gearing to create MyCompany.DotNetSnippets (Coming Soon)
 
-Install it as a C# source file in your project:
-
-```bash
-dotnet add package MyCompany.DotNetSnippets (Coming soon)
-
-Or copy-paste directly from MillionDollarDotnetSnippets.cs.
+copy-paste directly from MillionDollarDotnetSnippets.cs.
 
 ⸻
 
