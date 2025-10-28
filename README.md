@@ -138,3 +138,8 @@ Enterprise-ready helpers for data reliability, governance, and system control
 
 
 ⸻
+## 📈 ROI by Category
+
+> See how each group of snippets accelerates your CAD dev workflows:
+
+[View Full Mapping →](./snippet_category_impact_mapping.md)
