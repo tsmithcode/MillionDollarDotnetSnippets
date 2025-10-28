@@ -7,6 +7,16 @@ A practical, battle-ready utility library to accelerate development velocity acr
 
 ![1M Consultant Promo](./44335D96-1BB8-4EC4-B5A7-EED8265C0D97.png)
 
+## 📚 Table of Contents – 100 Code Snippets for the $1M .NET Consultant
+
+| Phase | File | Description |
+|-------|------|-------------|
+| 🔍 Phase 1 | [phase1_reflection_linq_di_basics.cs](https://github.com/tsmithcode/MillionDollarDotnetSnippets/blob/main/phase1_reflection_linq_di_basics.cs) | Foundational tools using Reflection, LINQ, and Dependency Injection. Ideal for setting up powerful, flexible codebases. |
+| ⚙️ Phase 2 | [phase2_async_api_pipeline_boilerplate.cs](https://github.com/tsmithcode/MillionDollarDotnetSnippets/blob/main/phase2_async_api_pipeline_boilerplate.cs) | Async-first mindset. Covers retries, cancellation tokens, and minimal API patterns to speed up service creation. |
+| 🧠 Phase 3 | [phase3_expression_codegen_strategies.cs](https://github.com/tsmithcode/MillionDollarDotnetSnippets/blob/main/phase3_expression_codegen_strategies.cs) | Advanced snippets using Expression Trees and source generation simulations. Great for clean abstraction layers. |
+| 🧪 Phase 4 | [phase4_validation_config_enum_tools.cs](https://github.com/tsmithcode/MillionDollarDotnetSnippets/blob/main/phase4_validation_config_enum_tools.cs) | Tools for smart configuration, validation rules, enum display helpers, and runtime-safe environment setups. |
+| 🧭 Master Index | [snippet_category_impact_mapping.md](https://github.com/tsmithcode/MillionDollarDotnetSnippets/blob/main/snippet_category_impact_mapping.md) | Visual table mapping all snippets by category and business value to help you find what matters fast. |
+
 ## 🧠 About This Repo
 
 This is a hand-crafted, high-performance utility library designed to compress weeks of .NET 8 development into hours.  
