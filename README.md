@@ -26,32 +26,6 @@ It is optimized for:
 
 ---
 
-📦 Categories & Examples
-
-| Category                 | Snippet Count | Highlights                                      |
-|--------------------------|---------------|--------------------------------------------------|
-| Reflection & Generics    | 10            | `CreateByName`, `SetProp`, `MapProps`, `MakeGeneric` |
-| LINQ + Collections       | 8             | `GroupByKey`, `SafeToDictionary`, `ZipToTuple`  |
-| JSON & Dictionary        | 4             | `ToJson`, `ToDictionary`, `MergeDictionaries`   |
-| Dependency Injection     | 3             | `RegisterAll`, `AddSingletonByType`             |
-| Async Pipelines          | 5             | `RetryAsync`, `FireAndForget`, `Delay + Cancellation` |
-| Minimal API              | 5             | `MapGet`, `MapPost`, `EnableSwagger`, `Problem()` |
-| Span & Memory            | 5             | `FastSplit`, `RentBuffer`, `SpanToString`       |
-| Errors & Logging         | 10            | `TryWrap`, `LogJson`, `Time()`, `ExceptionDetails` |
-| Expression Trees         | 5             | `BuildPredicate`, `OrderByProp`, `CreateGetter` |
-| Source Gen Simulations   | 5             | `InjectCode`, `GenerateCodeTemplate`, `MapUsingRegistry` |
-| CLI Utilities            | 5             | `WriteColor`, `DrawBox`, `WriteError`, `Confirm()` |
-| Auth & Security          | 5             | `Sha256`, `SecureToken`, `ToBase64`, `CheckPassword` |
-| Files & Streams          | 5             | `WriteLines`, `ReadStreamAsync`, `WriteTextAsync` |
-| Parsing & Conversion     | 5             | `ParseIntSafe`, `ParseCsvLine`, `ToQueryString` |
-| Enum & Attribute Tools   | 5             | `GetEnumDescription`, `HasAttribute()`          |
-| Data Validation          | 5             | `IsValid`, `MustBePresent`, `TrimAllStrings`    |
-| Config & Env Vars        | 5             | `GetEnv`, `LoadEnvFile`, `CurrentEnv()`         |
-| Meta & Caching           | 5             | `Memoize`, `InCache`, `ClearAllCache()`         |
-
-
-⸻
-
 🔥 Why This Matters
 
 Most devs reinvent the wheel.
@@ -102,6 +76,8 @@ See LICENSE.txt for terms.
 Absolutely. Here’s the full breakdown as 4 separate markdown tables, one per Phase (matching your 100-snippet library organization):
 
 ⸻
+
+📦 Categories & Examples
 
 📘 Phase 1 – Core Automation Primitives
 
