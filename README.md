@@ -125,10 +125,12 @@ Implementation map: [snippet_category_impact_mapping.md](/Users/cadguardianllc/D
 ## What Ships Today
 
 - a root solution file at `MillionDollarDotnetSnippets.slnx`
+- a Next.js App Router product site with a guided framework wizard at `app/`
 - a modular solution spine for core, application, infrastructure, rules, and extensions
 - a buildable `.NET 8` library at `src/MillionDollarDotnetSnippets`
 - a runnable golden-path quickstart example with file and HTTP ingestion modes at `examples/ConsultantQuickstart`
 - audit-friendly rule trace output in the golden path
+- production-style browser proof with Playwright at `tests/e2e`
 - archived legacy repo structure in `archive/legacy-flat-files`
 - brand assets and identity in `assets/`
 - indexed product, persona, and operating docs in `docs/`
@@ -139,6 +141,9 @@ Implementation map: [snippet_category_impact_mapping.md](/Users/cadguardianllc/D
 ```bash
 dotnet build MillionDollarDotnetSnippets.slnx
 dotnet run --project examples/ConsultantQuickstart/ConsultantQuickstart.csproj
+npm install
+npm run build
+npx playwright test
 ```
 
 What you will see:
@@ -172,6 +177,16 @@ var safe = ShipSafer.MustBePresent("ready", "status");
 
 The current source still contains `Phase*Snippets` internally.
 Use the capability-first APIs as the preferred product surface.
+
+## Web Experience
+
+The repo now includes a real product-facing web surface built with Next.js App Router:
+
+- `/` guided framework wizard
+- `/about` creator story and authority surface
+- `/proof` browser-facing proof and diagnostics summary
+
+Browser validation now covers the guided path, founder page, and proof page across desktop and mobile.
 
 ## Why This Repo Feels Different
 

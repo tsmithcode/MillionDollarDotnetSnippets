@@ -27,6 +27,12 @@ Use this folder as the operating and adoption hub for the repo.
 - [Acceptance Gates](./acceptance-gates.md)
 - [Role Charters](./roles/README.md)
 
+## Web product implementation
+
+- guided site implementation lives in `app/`
+- shared web content lives in `lib/` and `components/`
+- browser proof lives in `tests/e2e/`
+
 ## Templates
 
 - [30-Day Vision Memo](./templates/30-day-vision-memo.md)
