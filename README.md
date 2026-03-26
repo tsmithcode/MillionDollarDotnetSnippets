@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="./assets/hero.svg" alt="MillionDollarDotnetSnippets hero" width="100%" />
+  <img src="./assets/repo-hero.svg" alt="MillionDollarDotnetSnippets hero" width="100%" />
 </p>
+
+
 
 <h1 align="center">Million Dollar Dot Net Snippets</h1>
 
@@ -8,9 +10,7 @@
   High-leverage .NET building blocks for consultants and solution architects who get paid to make difficult business software move faster.
 </p>
 
-<p align="center">
-  <img src="./assets/repo-mark.svg" alt="MillionDollarDotnetSnippets mark" width="120" />
-</p>
+
 
 <p align="center">
   <sub>Core system mark (packages, CLI, low-resolution contexts)</sub>
@@ -18,6 +18,8 @@
 
 <p align="center">
   <a href="./docs/personas/high-roi-consultant.md">Highest-ROI Persona</a> ·
+  <a href="./docs/about-thomas-smith.md">About The Creator</a> ·
+  <a href="./docs/story-framework-wizard.md">Framework Wizard</a> ·
   <a href="./docs/GettingStarted.md">Getting Started</a> ·
   <a href="./docs/Architecture.md">Architecture</a> ·
   <a href="./docs/use-cases/highest-roi-use-cases.md">Use Cases</a> ·
@@ -30,10 +32,6 @@
 </p>
 
 ---
-
-<p align="center">
-  <img src="./assets/badge.svg" alt="MillionDollarDotnetSnippets badge" width="320" />
-</p>
 
 <p align="center">
   <sub>Presentation / marketing surface (README, landing, LinkedIn)</sub>
@@ -99,6 +97,8 @@ Typical wins:
 - safer retries and logging
 - easier parsing of ugly inbound data
 - less one-off utility code per client project
+- clearer rule-by-rule diagnostics for audits and debugging
+- a guided path that makes the framework understandable even for zero-knowledge users
 
 ## Start Here
 
@@ -127,7 +127,8 @@ Implementation map: [snippet_category_impact_mapping.md](/Users/cadguardianllc/D
 - a root solution file at `MillionDollarDotnetSnippets.slnx`
 - a modular solution spine for core, application, infrastructure, rules, and extensions
 - a buildable `.NET 8` library at `src/MillionDollarDotnetSnippets`
-- a runnable golden-path quickstart example at `examples/ConsultantQuickstart`
+- a runnable golden-path quickstart example with file and HTTP ingestion modes at `examples/ConsultantQuickstart`
+- audit-friendly rule trace output in the golden path
 - archived legacy repo structure in `archive/legacy-flat-files`
 - brand assets and identity in `assets/`
 - indexed product, persona, and operating docs in `docs/`
@@ -140,18 +141,37 @@ dotnet build MillionDollarDotnetSnippets.slnx
 dotnet run --project examples/ConsultantQuickstart/ConsultantQuickstart.csproj
 ```
 
+What you will see:
+
+- the same business records processed through file ingestion and HTTP-backed ingestion
+- explicit rule outcomes, including why a rule was skipped
+- validation feedback when a required field is missing
+- queue-level output that feels like a real delivery workflow, not a toy sample
+
+Sample output:
+
+```text
+Golden Path Demo
+================
+Environment: Production
+
+File source mode
+HTTP source mode
+Queues produced: Engineering Automation, Operations Systems
+```
+
 Basic usage:
 
 ```csharp
 using MillionDollarDotnetSnippets;
 
-var token = Phase3Snippets.SecureToken();
-var environment = Phase4Snippets.CurrentEnv();
-var grouped = Phase1Snippets.GroupByKey(new List<int> { 1, 2, 3, 4 }, x => x % 2);
+var environment = IntegrateMessySystems.CurrentEnv();
+var grouped = BuildFaster.GroupByKey(new List<int> { 1, 2, 3, 4 }, x => x % 2);
+var safe = ShipSafer.MustBePresent("ready", "status");
 ```
 
-The current source still uses `Phase*Snippets` modules internally.
-That is an implementation detail, not the product story.
+The current source still contains `Phase*Snippets` internally.
+Use the capability-first APIs as the preferred product surface.
 
 ## Why This Repo Feels Different
 
@@ -162,6 +182,7 @@ This repo is being built like a technology-enabled product company artifact, not
 - single solution entrypoint
 - buildable source layout
 - runnable example
+- auditable golden-path diagnostics instead of opaque helper behavior
 - indexed docs instead of loose reference files
 - explicit accessibility standards for docs and SVG assets
 - explicit contributor and governance surface
@@ -175,6 +196,7 @@ Premium is a quality bar here, not permission to become harder to use.
 - repo navigation is designed to be readable in linear and screen-reader flows
 - brand assets are governed by a visual system instead of ad hoc decoration
 - accessibility has named ownership and can block regressions
+- guided-product flows should be understandable with the confidence and clarity of a U.S. voting or civic-service system
 
 Supporting docs:
 
@@ -211,6 +233,9 @@ This repo now assumes enterprise-level ownership across product, code, platform,
 - Design / Brand Systems Lead
 - Accessibility & UX Quality Lead
 - Platform / Release Engineer
+- Founder Story Systems Lead
+- Frontend Product Experience Engineer
+- Browser & Device Reliability Engineer
 
 ## Contributing and Trust
 

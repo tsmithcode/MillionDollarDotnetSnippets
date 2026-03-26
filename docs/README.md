@@ -5,6 +5,10 @@ Use this folder as the operating and adoption hub for the repo.
 ## Start here
 
 - [Getting Started](./GettingStarted.md)
+- [About Thomas Smith](./about-thomas-smith.md)
+- [Story Framework Wizard](./story-framework-wizard.md)
+- [Browser Proof Plan](./browser-proof-plan.md)
+- [Company Shift Evaluation](./company-shift-evaluation.md)
 - [Adoption Playbook](./adoption-playbook.md)
 - [Use Cases](./UseCases.md)
 - [Architecture](./Architecture.md)
@@ -13,8 +17,6 @@ Use this folder as the operating and adoption hub for the repo.
 - [Product Surface](./product-surface.md)
 - [Accessibility Standards](./accessibility.md)
 - [Brand System](./brand-system.md)
-- [Premium Pass Checklist](./premium-pass-checklist.md)
-- [Accessibility Standards](./accessibility.md)
 - [Premium Pass Checklist](./premium-pass-checklist.md)
 
 ## Team and governance

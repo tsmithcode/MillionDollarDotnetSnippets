@@ -11,5 +11,8 @@ This folder defines the current enterprise-level specialist team for MillionDoll
 - [Design / Brand Systems Lead](./design-brand-systems-lead.md)
 - [Accessibility & UX Quality Lead](./accessibility-ux-quality-lead.md)
 - [Platform / Release Engineer](./platform-release-engineer.md)
+- [Founder Story Systems Lead](./founder-story-systems-lead.md)
+- [Frontend Product Experience Engineer](./frontend-product-experience-engineer.md)
+- [Browser & Device Reliability Engineer](./browser-device-reliability-engineer.md)
 
 Use these documents for hiring, onboarding, and performance calibration.

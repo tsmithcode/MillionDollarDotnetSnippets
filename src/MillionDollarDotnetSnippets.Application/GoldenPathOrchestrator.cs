@@ -26,10 +26,15 @@ public sealed class GoldenPathOrchestrator
         foreach (var record in records)
         {
             var transformed = new Dictionary<string, string>(record.Fields, StringComparer.OrdinalIgnoreCase);
-            var appliedRules = _ruleEngine.ApplyRules(record, transformed);
+            var evaluation = _ruleEngine.ApplyRules(record, transformed);
             var issues = _recordValidator.Validate(transformed);
 
-            output.Add(new ProcessedRecord(record.Id, transformed, appliedRules, issues));
+            output.Add(new ProcessedRecord(
+                record.Id,
+                transformed,
+                evaluation.AppliedRules,
+                issues,
+                evaluation.RuleTrace));
         }
 
         return output;

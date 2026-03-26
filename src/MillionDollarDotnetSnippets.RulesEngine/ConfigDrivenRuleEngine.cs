@@ -11,23 +11,49 @@ public sealed class ConfigDrivenRuleEngine : IRuleEngine
         _rules = rules;
     }
 
-    public IReadOnlyList<string> ApplyRules(WorkRecord record, IDictionary<string, string> output)
+    public RuleEvaluationResult ApplyRules(WorkRecord record, IDictionary<string, string> output)
     {
         var applied = new List<string>();
+        var trace = new List<RuleTrace>(_rules.Count);
 
         foreach (var rule in _rules)
         {
             if (!record.Fields.TryGetValue(rule.InputField, out var inputValue))
+            {
+                trace.Add(new RuleTrace(
+                    rule.Name,
+                    rule.InputField,
+                    null,
+                    rule.ExpectedValue,
+                    false,
+                    "Skipped because the input field was missing."));
                 continue;
+            }
 
             if (!string.Equals(inputValue, rule.ExpectedValue, StringComparison.OrdinalIgnoreCase))
+            {
+                trace.Add(new RuleTrace(
+                    rule.Name,
+                    rule.InputField,
+                    inputValue,
+                    rule.ExpectedValue,
+                    false,
+                    $"Skipped because '{inputValue}' did not match '{rule.ExpectedValue}'."));
                 continue;
+            }
 
             output[rule.OutputField] = rule.OutputValue;
             applied.Add(rule.Name);
+            trace.Add(new RuleTrace(
+                rule.Name,
+                rule.InputField,
+                inputValue,
+                rule.ExpectedValue,
+                true,
+                $"Applied and set '{rule.OutputField}' to '{rule.OutputValue}'."));
         }
 
-        return applied;
+        return new RuleEvaluationResult(applied, trace);
     }
 }
 

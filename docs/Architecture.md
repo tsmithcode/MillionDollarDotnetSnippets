@@ -9,7 +9,7 @@ The repo now follows a consultant-acceleration framework shape rather than a fla
 - `MillionDollarDotnetSnippets.Application`
   Orchestration and workflow coordination.
 - `MillionDollarDotnetSnippets.Infrastructure`
-  File and system boundary implementations.
+  File and HTTP boundary implementations.
 - `MillionDollarDotnetSnippets.RulesEngine`
   Config-driven rules and validation behavior.
 - `MillionDollarDotnetSnippets.Extensions`
@@ -22,6 +22,7 @@ The repo now follows a consultant-acceleration framework shape rather than a fla
 The quickstart app proves the core product story by showing one vertical slice:
 
 1. load records
-2. apply rules
-3. validate output
-4. print a useful result
+2. support both file and HTTP-backed ingestion modes
+3. apply rules
+4. validate output
+5. print an auditable result

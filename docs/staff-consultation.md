@@ -36,3 +36,12 @@ We reviewed external advice that called for a tighter execution panel around arc
 ## Remaining truth
 
 The new structure is the right direction, but the repo still needs continued iteration before it fully earns the strongest enterprise and framework-level claims.
+
+## Current organization additions for the website and guided-product shift
+
+- Founder Story Systems Lead
+  Now owns the creator narrative as a high-trust product asset rather than generic brand copy.
+- Frontend Product Experience Engineer
+  Now owns the public surface as a guided framework wizard instead of a static marketing site.
+- Browser & Device Reliability Engineer
+  Now owns real browser and device proof in production-like conditions, including release confidence for accessibility-critical flows.

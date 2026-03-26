@@ -27,6 +27,9 @@ The repo uses domain ownership, not committee ownership.
 - The Design / Brand Systems Lead owns repo visual identity, README hierarchy, and brand consistency across shipped assets.
 - The Accessibility & UX Quality Lead owns readability, navigation, accessibility standards, and premium-pass usability review.
 - The Platform / Release Engineer owns entrypoint clarity, CI maturity, packaging reliability, and release ergonomics.
+- The Founder Story Systems Lead owns founder narrative quality, creator credibility translation, case-study selection, and the link between founder authority and product trust.
+- The Frontend Product Experience Engineer owns the public web experience, guided-framework wizard implementation, responsive interaction quality, and zero-knowledge onboarding flow.
+- The Browser & Device Reliability Engineer owns browser automation, device coverage, preview validation, and release confidence for the public product surface.
 
 ## Authority Rules
 
@@ -44,6 +47,8 @@ The repo uses domain ownership, not committee ownership.
 - Positioning, audience, and repo promise conflicts are resolved by the Product / Positioning Lead.
 - When a decision affects both technical truth and market truth, the Architect and Product Lead produce a single written decision with tradeoffs and expected upside.
 - README, narrative, and visual-direction conflicts are resolved by Product, Writer, and Design together, with Product holding final positioning authority.
+- Founder-story conflicts are resolved by Founder Story Systems Lead, Product, and Writer together, with Product holding final positioning authority.
+- Browser, device, and preview-quality release conflicts are resolved by Browser & Device Reliability Engineer and QA together, with release-blocking authority when critical proof is missing.
 
 ## Weekly Operating Cadence
 
