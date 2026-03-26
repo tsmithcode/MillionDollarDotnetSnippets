@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "WORK-1001",
+    "Fields": {
+      "WorkType": "CAD",
+      "Priority": "Urgent",
+      "Client": "Northwind"
+    }
+  },
+  {
+    "Id": "WORK-1002",
+    "Fields": {
+      "WorkType": "ERP",
+      "Priority": "Normal",
+      "Client": "Contoso"
+    }
+  }
+]

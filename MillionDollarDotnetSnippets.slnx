@@ -3,6 +3,11 @@
     <Project Path="examples/ConsultantQuickstart/ConsultantQuickstart.csproj" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/MillionDollarDotnetSnippets.Application/MillionDollarDotnetSnippets.Application.csproj" />
+    <Project Path="src/MillionDollarDotnetSnippets.Core/MillionDollarDotnetSnippets.Core.csproj" />
+    <Project Path="src/MillionDollarDotnetSnippets.Extensions/MillionDollarDotnetSnippets.Extensions.csproj" />
+    <Project Path="src/MillionDollarDotnetSnippets.Infrastructure/MillionDollarDotnetSnippets.Infrastructure.csproj" />
+    <Project Path="src/MillionDollarDotnetSnippets.RulesEngine/MillionDollarDotnetSnippets.RulesEngine.csproj" />
     <Project Path="src/MillionDollarDotnetSnippets/MillionDollarDotnetSnippets.csproj" />
   </Folder>
 </Solution>

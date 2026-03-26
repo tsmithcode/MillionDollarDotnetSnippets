@@ -19,6 +19,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.Application\MillionDollarDotnetSnippets.Application.csproj" />
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.Core\MillionDollarDotnetSnippets.Core.csproj" />
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.Extensions\MillionDollarDotnetSnippets.Extensions.csproj" />
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.Infrastructure\MillionDollarDotnetSnippets.Infrastructure.csproj" />
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.RulesEngine\MillionDollarDotnetSnippets.RulesEngine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

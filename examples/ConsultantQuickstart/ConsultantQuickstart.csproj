@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\MillionDollarDotnetSnippets.Application\MillionDollarDotnetSnippets.Application.csproj" />
+    <ProjectReference Include="..\..\src\MillionDollarDotnetSnippets.Core\MillionDollarDotnetSnippets.Core.csproj" />
+    <ProjectReference Include="..\..\src\MillionDollarDotnetSnippets.Extensions\MillionDollarDotnetSnippets.Extensions.csproj" />
+    <ProjectReference Include="..\..\src\MillionDollarDotnetSnippets.Infrastructure\MillionDollarDotnetSnippets.Infrastructure.csproj" />
     <ProjectReference Include="..\..\src\MillionDollarDotnetSnippets\MillionDollarDotnetSnippets.csproj" />
+    <ProjectReference Include="..\..\src\MillionDollarDotnetSnippets.RulesEngine\MillionDollarDotnetSnippets.RulesEngine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\input.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

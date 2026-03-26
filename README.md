@@ -1,9 +1,5 @@
 <p align="center">
-  <img src="./assets/repo-mark.svg" alt="MillionDollarDotnetSnippets mark" width="420" />
-</p>
-
-<p align="center">
-  <img src="./assets/repo-hero.svg" alt="MillionDollarDotnetSnippets hero" width="100%" />
+  <img src="./assets/hero.svg" alt="MillionDollarDotnetSnippets hero" width="100%" />
 </p>
 
 <h1 align="center">Million Dollar Dot Net Snippets</h1>
@@ -13,7 +9,17 @@
 </p>
 
 <p align="center">
+  <img src="./assets/repo-mark.svg" alt="MillionDollarDotnetSnippets mark" width="120" />
+</p>
+
+<p align="center">
+  <sub>Core system mark (packages, CLI, low-resolution contexts)</sub>
+</p>
+
+<p align="center">
   <a href="./docs/personas/high-roi-consultant.md">Highest-ROI Persona</a> ·
+  <a href="./docs/GettingStarted.md">Getting Started</a> ·
+  <a href="./docs/Architecture.md">Architecture</a> ·
   <a href="./docs/use-cases/highest-roi-use-cases.md">Use Cases</a> ·
   <a href="./docs/adoption-playbook.md">Adoption Playbook</a> ·
   <a href="./docs/README.md">Docs Index</a> ·
@@ -21,6 +27,26 @@
   <a href="./docs/brand-system.md">Brand System</a> ·
   <a href="./docs/vision-brief.md">Vision Brief</a> ·
   <a href="./examples/ConsultantQuickstart">Quickstart</a>
+</p>
+
+---
+
+<p align="center">
+  <img src="./assets/badge.svg" alt="MillionDollarDotnetSnippets badge" width="320" />
+</p>
+
+<p align="center">
+  <sub>Presentation / marketing surface (README, landing, LinkedIn)</sub>
+</p>
+
+---
+
+<p align="center">
+  <img src="./assets/dark-variant.svg" alt="MillionDollarDotnetSnippets dark variant" width="160" />
+</p>
+
+<p align="center">
+  <sub>Monochrome / low-light UI variant</sub>
 </p>
 
 ## The Promise
@@ -36,6 +62,7 @@ It is this:
 - reduce time lost to scaffolding and utility sprawl
 - make adoption obvious for the highest-ROI user
 - present that utility with the confidence of a serious product
+- evolve toward a consultant acceleration framework, not a code dump
 
 ## Who It Is For
 
@@ -79,8 +106,9 @@ If you want the shortest path from landing page to productive use:
 
 1. Build the repo with `dotnet build MillionDollarDotnetSnippets.slnx`
 2. Run the example in [examples/ConsultantQuickstart](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/examples/ConsultantQuickstart)
-3. Read the [Adoption Playbook](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/adoption-playbook.md)
-4. Use the [Docs Index](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/README.md) for everything else
+3. Read the [Getting Started guide](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/GettingStarted.md)
+4. Review the [Architecture guide](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/Architecture.md)
+5. Use the [Docs Index](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/README.md) for everything else
 
 ## Product Surface
 
@@ -97,8 +125,9 @@ Implementation map: [snippet_category_impact_mapping.md](/Users/cadguardianllc/D
 ## What Ships Today
 
 - a root solution file at `MillionDollarDotnetSnippets.slnx`
+- a modular solution spine for core, application, infrastructure, rules, and extensions
 - a buildable `.NET 8` library at `src/MillionDollarDotnetSnippets`
-- a runnable quickstart example at `examples/ConsultantQuickstart`
+- a runnable golden-path quickstart example at `examples/ConsultantQuickstart`
 - archived legacy repo structure in `archive/legacy-flat-files`
 - brand assets and identity in `assets/`
 - indexed product, persona, and operating docs in `docs/`

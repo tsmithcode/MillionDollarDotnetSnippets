@@ -4,7 +4,10 @@ Use this folder as the operating and adoption hub for the repo.
 
 ## Start here
 
+- [Getting Started](./GettingStarted.md)
 - [Adoption Playbook](./adoption-playbook.md)
+- [Use Cases](./UseCases.md)
+- [Architecture](./Architecture.md)
 - [Highest-ROI Persona](./personas/high-roi-consultant.md)
 - [Highest-ROI Use Cases](./use-cases/highest-roi-use-cases.md)
 - [Product Surface](./product-surface.md)
@@ -16,6 +19,7 @@ Use this folder as the operating and adoption hub for the repo.
 
 ## Team and governance
 
+- [Staff Consultation Outcome](./staff-consultation.md)
 - [Vision Brief](./vision-brief.md)
 - [Operating Model](./operating-model.md)
 - [Acceptance Gates](./acceptance-gates.md)

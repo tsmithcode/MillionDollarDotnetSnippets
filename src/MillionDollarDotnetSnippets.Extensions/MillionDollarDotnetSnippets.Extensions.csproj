@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.Application\MillionDollarDotnetSnippets.Application.csproj" />
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.Core\MillionDollarDotnetSnippets.Core.csproj" />
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.Infrastructure\MillionDollarDotnetSnippets.Infrastructure.csproj" />
+    <ProjectReference Include="..\MillionDollarDotnetSnippets.RulesEngine\MillionDollarDotnetSnippets.RulesEngine.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+</Project>

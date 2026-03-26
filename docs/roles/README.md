@@ -1,6 +1,6 @@
 # Role Charters and Scorecards
 
-This folder defines the four autonomous hires for MillionDollarDotnetSnippets.
+This folder defines the current enterprise-level specialist team for MillionDollarDotnetSnippets.
 
 - [Senior .NET Architect / Library Owner](./senior-dotnet-architect.md)
 - [Technical Writer / Developer Experience Editor](./technical-writer-dx-editor.md)

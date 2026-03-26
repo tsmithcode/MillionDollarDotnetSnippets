@@ -1,25 +1,37 @@
+using Microsoft.Extensions.DependencyInjection;
+using MillionDollarDotnetSnippets.Application;
+using MillionDollarDotnetSnippets.Core;
+using MillionDollarDotnetSnippets.Extensions;
 using MillionDollarDotnetSnippets;
 
-var beltRows = new List<BeltRow>
+var services = new ServiceCollection();
+
+var rules = new List<RuleDefinition>
 {
-    new("B-100", "Fab", "12.5", "true"),
-    new("B-200", "Fab", "18.75", "false"),
-    new("B-300", "Assembly", "12.5", "true")
+    new("Promote urgent work", "Priority", "Urgent", "Status", "Escalated"),
+    new("Route CAD work", "WorkType", "CAD", "Queue", "Engineering Automation"),
+    new("Route ERP work", "WorkType", "ERP", "Queue", "Operations Systems")
 };
 
-var groupedByDepartment = Phase1Snippets.GroupByKey(beltRows, row => row.Department);
-var activeRows = beltRows.Where(row => Phase4Snippets.ParseBoolSafe(row.IsActive)).ToList();
-var laborBySku = activeRows.ToDictionary(
-    row => row.Sku,
-    row => Phase4Snippets.ParseDecimalSafe(row.LaborHours));
+var inputPath = Path.Combine(AppContext.BaseDirectory, "Data", "input.json");
 
-var onboardingToken = Phase3Snippets.SecureToken(12);
-var environment = Phase4Snippets.CurrentEnv();
+services.AddGoldenPathDemo(inputPath, rules);
 
-Console.WriteLine("MillionDollarDotnetSnippets Quickstart");
-Console.WriteLine($"Environment: {environment}");
-Console.WriteLine($"Departments: {string.Join(", ", groupedByDepartment.Keys)}");
-Console.WriteLine($"Labor hours tracked: {laborBySku.Sum(x => x.Value):0.##}");
-Console.WriteLine($"Sample onboarding token: {onboardingToken}");
+var provider = services.BuildServiceProvider();
+var orchestrator = provider.GetRequiredService<GoldenPathOrchestrator>();
+var processed = await orchestrator.ProcessAsync();
 
-internal sealed record BeltRow(string Sku, string Department, string LaborHours, string IsActive);
+Console.WriteLine("Golden Path Demo");
+Console.WriteLine("================");
+Console.WriteLine($"Environment: {Phase4Snippets.CurrentEnv()}");
+Console.WriteLine();
+
+foreach (var record in processed)
+{
+    Console.WriteLine($"Record: {record.Id}");
+    Console.WriteLine($"  Queue: {record.Fields.GetValueOrDefault("Queue", "Unassigned")}");
+    Console.WriteLine($"  Status: {record.Fields.GetValueOrDefault("Status", "Unset")}");
+    Console.WriteLine($"  Applied Rules: {(record.AppliedRules.Count == 0 ? "None" : string.Join(", ", record.AppliedRules))}");
+    Console.WriteLine($"  Validation Issues: {(record.ValidationIssues.Count == 0 ? "None" : string.Join("; ", record.ValidationIssues.Select(x => x.Message)))}");
+    Console.WriteLine();
+}
