@@ -1,0 +1,25 @@
+changelog:
+  categories:
+    - title: Library Improvements
+      labels:
+        - enhancement
+        - library
+    - title: Docs and Adoption
+      labels:
+        - docs
+        - adoption
+    - title: Quality and Platform
+      labels:
+        - qa
+        - ci
+        - platform
+    - title: Visual and Brand
+      labels:
+        - design
+        - brand
+    - title: Bug Fixes
+      labels:
+        - bug
+  exclude:
+    labels:
+      - skip-changelog

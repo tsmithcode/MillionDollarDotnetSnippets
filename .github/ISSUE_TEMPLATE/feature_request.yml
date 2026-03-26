@@ -1,0 +1,24 @@
+name: Feature request
+description: Propose a high-ROI addition to the repo.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What repeated problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: persona
+    attributes:
+      label: Which user benefits most?
+      description: Describe the consultant, lead, or builder who wins.
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: What proof should accompany this?
+    validations:
+      required: true

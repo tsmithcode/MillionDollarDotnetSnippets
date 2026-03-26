@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/examples/">
+    <Project Path="examples/ConsultantQuickstart/ConsultantQuickstart.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/MillionDollarDotnetSnippets/MillionDollarDotnetSnippets.csproj" />
+  </Folder>
+</Solution>

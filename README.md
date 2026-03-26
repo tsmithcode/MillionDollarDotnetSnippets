@@ -1,154 +1,198 @@
-# 💼 100 Code Snippets for the $1M .NET 8 Consultant
+<p align="center">
+  <img src="./assets/repo-mark.svg" alt="MillionDollarDotnetSnippets mark" width="420" />
+</p>
 
-Build in hours what others build in weeks.  
-This repo is your unfair advantage.
+<p align="center">
+  <img src="./assets/repo-hero.svg" alt="MillionDollarDotnetSnippets hero" width="100%" />
+</p>
 
-A practical, battle-tested utility library to accelerate development velocity across APIs, CLI tools, Blazor, WinForms, and everything in between.
+<h1 align="center">Million Dollar Dot Net Snippets</h1>
 
-![1M Consultant Promo](https://raw.githubusercontent.com/tsmithcode/MillionDollarDotnetSnippets/main/44335D96-1BB8-4EC4-B5A7-EED8265C0D97.png)
+<p align="center">
+  High-leverage .NET building blocks for consultants and solution architects who get paid to make difficult business software move faster.
+</p>
 
----
+<p align="center">
+  <a href="./docs/personas/high-roi-consultant.md">Highest-ROI Persona</a> ·
+  <a href="./docs/use-cases/highest-roi-use-cases.md">Use Cases</a> ·
+  <a href="./docs/adoption-playbook.md">Adoption Playbook</a> ·
+  <a href="./docs/README.md">Docs Index</a> ·
+  <a href="./docs/accessibility.md">Accessibility</a> ·
+  <a href="./docs/brand-system.md">Brand System</a> ·
+  <a href="./docs/vision-brief.md">Vision Brief</a> ·
+  <a href="./examples/ConsultantQuickstart">Quickstart</a>
+</p>
 
-## 📘 Table of Contents – 100 Code Snippets
+## The Promise
 
-- 🔍 [Phase 1 – `phase1_reflection_linq_di_basics.cs`](./phase1_reflection_linq_di_basics.cs)  
-  Foundational tools using Reflection, LINQ, and Dependency Injection. Your launchpad to clean, scalable code.
+This repo exists for a specific kind of .NET professional:
 
-- ⚙️ [Phase 2 – `phase2_async_api_pipeline_boilerplate.cs`](./phase2_async_api_pipeline_boilerplate.cs)  
-  Async-first patterns. Minimal APIs. Logging, retries, and cancellation the way they should’ve taught it.
+the consultant, architect, or lead engineer whose value comes from compressing delivery time on internal tools, APIs, automations, integrations, and operational software.
 
-- 🧠 [Phase 3 – `phase3_expression_codegen_strategies.cs`](./phase3_expression_codegen_strategies.cs)  
-  Code like a compiler. Expression trees, source generation tricks, and CLI tools for automation pros.
+The repo promise is not “100 random snippets.”
+It is this:
 
-- 🧪 [Phase 4 – `phase4_validation_config_enum_tools.cs`](./phase4_validation_config_enum_tools.cs)  
-  Clean config, powerful validation, enum tools, runtime safety. Rock-solid systems at scale.
+- turn repeated engineering moves into reusable leverage
+- reduce time lost to scaffolding and utility sprawl
+- make adoption obvious for the highest-ROI user
+- present that utility with the confidence of a serious product
 
-- 🧭 [Master Index – `snippet_category_impact_mapping.md`](./snippet_category_impact_mapping.md)  
-  One-click map of all 100 snippets, organized by category and ROI. Cut through noise. Find what matters fast.
+## Who It Is For
 
----
+This repo is built for people working in:
 
-## ⚡ What’s Inside?
+- internal tools
+- ERP and CRM integrations
+- CAD and manufacturing-adjacent automation
+- admin backplanes and line-of-business APIs
+- workflow orchestration and operations software
 
-This isn’t your typical utility dump.  
-This is a handcrafted vault of reusable power moves:
+If you regularly move between messy systems, write glue code under deadline pressure, or need a reusable utility edge across client work, this repo is for you.
 
-- 🔁 Reflection & Type Tricks → `CreateByName`, `MapProps`, `SetProp`
-- 🧠 LINQ Blackbelt Moves → `GroupByKey`, `ToLookupSafe`, `ZipToTuple`
-- 🚀 Minimal API Scaffolds → `MapPost<TIn, TOut>()`, `FireAndForget()`
-- 🧵 Async Retry & Resilience → `RetryAsync`, `WithTimeout`, `TryWrap()`
-- 🧾 Enum + Metadata Extraction → `GetEnumDisplay`, `HasAttribute<T>()`
-- 🔐 Secure Pipelines → `Sha256()`, `GenerateToken()`, `ValidatePassword()`
-- 🧬 Expression Trees + Source Gen → `CreateGetter()`, `BuildPredicate()`
-- 🌍 Environment-Ready Config → `LoadEnv()`, `CurrentEnv()`, `MustBePresent()`
+Read:
 
-Zero fluff. Every line earns its place.  
-These are patterns I deploy to automate CAD systems, ERP workflows, and industrial-grade configurators in production.
+- [Highest-ROI Persona](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/personas/high-roi-consultant.md)
+- [Highest-ROI Use Cases](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/use-cases/highest-roi-use-cases.md)
+- [Adoption Playbook](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/adoption-playbook.md)
 
----
+## How You Use It
 
-## 📦 Phase Breakdown – Snippets by Category
+You do not need to “adopt the repo.”
+You use it the same way high-performing consultants use any strong utility layer:
 
-### 📘 Phase 1 – Core Automation Primitives
-Reflection, LINQ, JSON, and Dependency Injection
+1. Find the repeated problem in the current engagement.
+2. Take the smallest helper or pattern that removes the most drag.
+3. Adapt it to the project in front of you.
+4. Repeat until your delivery stack gets sharper and more reusable.
 
-| Category               | Snippet Count | Highlights                                      |
-|------------------------|---------------|--------------------------------------------------|
-| Reflection & Generics  | 10            | `CreateByName`, `SetProp`, `MapProps`, `MakeGeneric` |
-| LINQ + Collections     | 8             | `GroupByKey`, `SafeToDictionary`, `ZipToTuple`  |
-| JSON & Dictionary      | 4             | `ToJson`, `ToDictionary`, `MergeDictionaries`   |
-| Dependency Injection   | 3             | `RegisterAll`, `AddSingletonByType`             |
+Typical wins:
 
----
+- faster API scaffolding
+- cleaner object mapping
+- safer retries and logging
+- easier parsing of ugly inbound data
+- less one-off utility code per client project
 
-### 📗 Phase 2 – Async, Minimal API, Memory & Logging
-Build fast apps with async, minimal surface area, and max observability
+## Start Here
 
-| Category               | Snippet Count | Highlights                                          |
-|------------------------|---------------|------------------------------------------------------|
-| Async Pipelines        | 5             | `RetryAsync`, `FireAndForget`, `Delay + Cancellation` |
-| Minimal API            | 5             | `MapGet`, `MapPost`, `EnableSwagger`, `Problem()`     |
-| Span & Memory          | 5             | `FastSplit`, `RentBuffer`, `SpanToString`             |
-| Errors & Logging       | 10            | `TryWrap`, `LogJson`, `Time()`, `ExceptionDetails`    |
+If you want the shortest path from landing page to productive use:
 
----
+1. Build the repo with `dotnet build MillionDollarDotnetSnippets.slnx`
+2. Run the example in [examples/ConsultantQuickstart](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/examples/ConsultantQuickstart)
+3. Read the [Adoption Playbook](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/adoption-playbook.md)
+4. Use the [Docs Index](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/README.md) for everything else
 
-### 📙 Phase 3 – Code Gen, CLI, Auth, and IO
-Automation tools, secure pipelines, and code-first development
+## Product Surface
 
-| Category               | Snippet Count | Highlights                                            |
-|------------------------|---------------|--------------------------------------------------------|
-| Expression Trees       | 5             | `BuildPredicate`, `OrderByProp`, `CreateGetter`        |
-| Source Gen Simulations | 5             | `InjectCode`, `GenerateCodeTemplate`, `MapUsingRegistry` |
-| CLI Utilities          | 5             | `WriteColor`, `DrawBox`, `WriteError`, `Confirm()`     |
-| Auth & Security        | 5             | `Sha256`, `SecureToken`, `ToBase64`, `CheckPassword`   |
-| Files & Streams        | 5             | `WriteLines`, `ReadStreamAsync`, `WriteTextAsync`      |
+| Capability area | What it helps you do | Representative helpers |
+|---|---|---|
+| Build Faster | shape data, wire utilities, move faster in new projects | `CreateByName`, `MapProps`, `GroupByKey`, `RegisterAll` |
+| Ship Safer | reduce runtime surprises and tighten delivery quality | `RetryAsync`, `TryWrap`, `LogJson`, `MustBePresent` |
+| Automate More | package repeat work into tooling and dynamic helpers | `CreateGetter`, `GenerateCodeTemplate`, `ReadStreamAsync`, `WriteBlock` |
+| Integrate Messy Systems | stabilize inputs, config, and system boundaries | `ParseCsvLine`, `CurrentEnv`, `LoadEnv`, `Memoize` |
 
----
+Product capability map: [product-surface.md](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/product-surface.md)  
+Implementation map: [snippet_category_impact_mapping.md](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/snippet_category_impact_mapping.md)
 
-### 📕 Phase 4 – Parsing, Validation, Config, and Caching
-Enterprise-ready helpers for data reliability, governance, and system control
+## What Ships Today
 
-| Category               | Snippet Count | Highlights                                      |
-|------------------------|---------------|--------------------------------------------------|
-| Parsing & Conversion   | 5             | `ParseIntSafe`, `ParseCsvLine`, `ToQueryString` |
-| Enum & Attribute Tools | 5             | `GetEnumDescription`, `HasAttribute()`          |
-| Data Validation        | 5             | `IsValid`, `MustBePresent`, `TrimAllStrings`    |
-| Config & Env Vars      | 5             | `GetEnv`, `LoadEnvFile`, `CurrentEnv()`         |
-| Meta & Caching         | 5             | `Memoize`, `InCache`, `ClearAllCache()`         |
+- a root solution file at `MillionDollarDotnetSnippets.slnx`
+- a buildable `.NET 8` library at `src/MillionDollarDotnetSnippets`
+- a runnable quickstart example at `examples/ConsultantQuickstart`
+- archived legacy repo structure in `archive/legacy-flat-files`
+- brand assets and identity in `assets/`
+- indexed product, persona, and operating docs in `docs/`
+- GitHub contribution and CI scaffolding in `.github/`
 
----
+## Start in 60 Seconds
 
-## 🧠 About This Repo
+```bash
+dotnet build MillionDollarDotnetSnippets.slnx
+dotnet run --project examples/ConsultantQuickstart/ConsultantQuickstart.csproj
+```
 
-This repo is built for **velocity**, not complexity.  
-Designed for consultants, leads, and solution architects who solve high-leverage problems with elegance.
+Basic usage:
 
-- ✳️ Build internal tools in hours  
-- ⚙️ Replace boilerplate with copy-paste magic  
-- 🔁 Refactor legacy code with composable snippets  
-- 🧠 Train junior devs with expert-readable examples  
+```csharp
+using MillionDollarDotnetSnippets;
 
-It’s not just code.  
-It’s leverage.
+var token = Phase3Snippets.SecureToken();
+var environment = Phase4Snippets.CurrentEnv();
+var grouped = Phase1Snippets.GroupByKey(new List<int> { 1, 2, 3, 4 }, x => x % 2);
+```
 
----
+The current source still uses `Phase*Snippets` modules internally.
+That is an implementation detail, not the product story.
 
-## 👑 Author
+## Why This Repo Feels Different
 
-Built by **Thomas Smith**, a .NET 8 Solutions Architect & CAD automation specialist.  
-Helping Fortune 500s and fast-growing startups reduce delivery timelines by **90%+** through modular C# architecture.
+This repo is being built like a technology-enabled product company artifact, not a casual snippet archive.
 
-- 🔩 CAD + Autodesk Vault + SolidWorks Automation  
-- 💼 ERP/CRM Integration (Epicor, SugarCRM, Windchill)  
-- 🔧 CLI, WinForms, Blazor, and API Tooling at Scale  
+- one clear high-value persona
+- stronger visual identity
+- single solution entrypoint
+- buildable source layout
+- runnable example
+- indexed docs instead of loose reference files
+- explicit accessibility standards for docs and SVG assets
+- explicit contributor and governance surface
+- room for the team to fully revise vision and presentation from the title alone
 
-> Follow on [LinkedIn](https://www.linkedin.com/in/tsmithcode)  
-> Explore tools at [TSmithCode.ai](https://tsmithcode.ai)
+## Accessibility and Premium Standard
 
----
+Premium is a quality bar here, not permission to become harder to use.
 
-## 🛠️ Contributing
+- SVG assets include accessible labels and descriptions
+- repo navigation is designed to be readable in linear and screen-reader flows
+- brand assets are governed by a visual system instead of ad hoc decoration
+- accessibility has named ownership and can block regressions
 
-- Found a bug? Submit an issue.  
-- Want to add your snippet? Send a PR with context.  
-- Want to collaborate? Let’s build tools together.
+Supporting docs:
 
----
+- [Accessibility Standards](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/accessibility.md)
+- [Brand System](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/brand-system.md)
+- [Premium Pass Checklist](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/premium-pass-checklist.md)
 
-## 📜 Licensing & Use
+## Team Authority
 
-**NOT open source** — request permission before use.
+The team is explicitly allowed to completely revise the README, vision, packaging, and product expression as long as the result better delivers on the title:
 
-Email **tsmithcad@gmail.com** or contact via [TSmithCode.ai](https://tsmithcode.ai)
+**Million Dollar Dot Net Snippets**
 
-Please include:
-- Name of your company or project  
-- Intended use (internal, embedded, product, etc.)  
-- License type (1-time, ongoing, SaaS embedding, etc.)
+Supporting docs:
 
-© 2025 Thomas Smith / TSmithCode.ai. All rights reserved.  
-See `LICENSE.txt` for full terms.
+- [Vision Brief](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/vision-brief.md)
+- [Operating Model](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/operating-model.md)
+- [Acceptance Gates](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/acceptance-gates.md)
+- [Accessibility Standards](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/accessibility.md)
+- [Brand System](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/brand-system.md)
+- [Premium Pass Checklist](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/premium-pass-checklist.md)
+- [Role Charters](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/roles)
 
+## Enterprise Team
 
-⸻
+This repo now assumes enterprise-level ownership across product, code, platform, design, accessibility, and adoption.
+
+- Senior .NET Architect / Library Owner
+- Technical Writer / Developer Experience Editor
+- QA / Test Automation Engineer
+- Product / Positioning Lead
+- Developer Relations / Community Lead
+- Growth Product Marketer / Content Lead
+- Design / Brand Systems Lead
+- Accessibility & UX Quality Lead
+- Platform / Release Engineer
+
+## Contributing and Trust
+
+- [Contributing guide](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/CONTRIBUTING.md)
+- [Code of conduct](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/CODE_OF_CONDUCT.md)
+- [Security policy](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/SECURITY.md)
+- [Support guide](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/SUPPORT.md)
+
+## Licensing
+
+This repo is not open source.
+Commercial use, embedding, and licensing questions should go to `tsmithcad@gmail.com`.
+
+See [LICENSE.txt](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/LICENSE.txt) for current terms.

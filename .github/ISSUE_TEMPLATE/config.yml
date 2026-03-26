@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support
+    url: https://github.com/tsmithcode/MillionDollarDotnetSnippets/blob/main/SUPPORT.md
+    about: Use the support guide for repo usage questions and commercial contact paths.
+  - name: Security
+    url: https://github.com/tsmithcode/MillionDollarDotnetSnippets/blob/main/SECURITY.md
+    about: Report vulnerabilities privately using the security policy.

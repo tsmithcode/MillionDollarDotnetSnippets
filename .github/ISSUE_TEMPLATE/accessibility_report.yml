@@ -1,0 +1,24 @@
+name: Accessibility report
+description: Report a readability, navigation, or assistive-technology issue.
+title: "[Accessibility]: "
+labels: ["accessibility"]
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is hard to use or understand?
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Where does it happen?
+      description: README, SVG asset, docs page, example, or code surface.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why does this matter?
+    validations:
+      required: true
