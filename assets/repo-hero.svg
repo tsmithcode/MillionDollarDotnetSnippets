@@ -4,27 +4,28 @@
   <rect width="1280" height="640" fill="#0D0D0E"/>
   <rect x="32" y="32" width="1216" height="576" rx="28" fill="#151515" stroke="#292929"/>
   <rect x="72" y="72" width="1136" height="214" rx="22" fill="url(#heroGradient)"/>
-  <text x="96" y="124" fill="#111111" font-family="Georgia, serif" font-size="24" letter-spacing="4">MILLION DOLLAR DOT NET SNIPPETS</text>
-  <text x="96" y="186" fill="#111111" font-family="Georgia, serif" font-size="60" font-weight="700">Reusable .NET leverage</text>
-  <text x="96" y="244" fill="#111111" font-family="Georgia, serif" font-size="60" font-weight="700">for premium delivery work</text>
-  <rect x="96" y="322" width="230" height="56" rx="28" fill="#141414"/>
-  <text x="132" y="358" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="23">Buildable library</text>
-  <rect x="346" y="322" width="238" height="56" rx="28" fill="#141414"/>
-  <text x="382" y="358" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="23">Quickstart example</text>
-  <rect x="604" y="322" width="266" height="56" rx="28" fill="#141414"/>
-  <text x="640" y="358" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="23">Enterprise-ready repo</text>
-  <rect x="96" y="430" width="328" height="126" rx="18" fill="#111111" stroke="#353535"/>
+  <text x="96" y="122" fill="#111111" font-family="Georgia, serif" font-size="22" letter-spacing="4">MILLION DOLLAR DOT NET SNIPPETS</text>
+  <text x="96" y="172" fill="#111111" font-family="Georgia, serif" font-size="42" font-weight="700">Reusable .NET building blocks</text>
+  <text x="96" y="216" fill="#111111" font-family="Georgia, serif" font-size="42" font-weight="700">for high-value delivery teams</text>
+  <text x="96" y="260" fill="#111111" font-family="Georgia, serif" font-size="42" font-weight="700">and consultants</text>
+  <rect x="96" y="322" width="214" height="54" rx="27" fill="#141414"/>
+  <text x="130" y="356" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="22">Buildable library</text>
+  <rect x="330" y="322" width="224" height="54" rx="27" fill="#141414"/>
+  <text x="364" y="356" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="22">Quickstart example</text>
+  <rect x="574" y="322" width="242" height="54" rx="27" fill="#141414"/>
+  <text x="608" y="356" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="22">Enterprise-ready repo</text>
+  <rect x="96" y="430" width="328" height="120" rx="18" fill="#111111" stroke="#353535"/>
   <text x="126" y="472" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="24">Audience</text>
-  <text x="126" y="510" fill="#CABAA6" font-family="Arial, sans-serif" font-size="20">Senior .NET consultants, architects,</text>
-  <text x="126" y="538" fill="#CABAA6" font-family="Arial, sans-serif" font-size="20">and lead engineers shipping business software.</text>
-  <rect x="476" y="430" width="328" height="126" rx="18" fill="#111111" stroke="#353535"/>
+  <text x="126" y="508" fill="#CABAA6" font-family="Arial, sans-serif" font-size="18">Senior .NET consultants, architects,</text>
+  <text x="126" y="534" fill="#CABAA6" font-family="Arial, sans-serif" font-size="18">and lead engineers shipping business software.</text>
+  <rect x="476" y="430" width="328" height="120" rx="18" fill="#111111" stroke="#353535"/>
   <text x="506" y="472" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="24">Use it to</text>
-  <text x="506" y="510" fill="#CABAA6" font-family="Arial, sans-serif" font-size="20">Ship internal tools faster, tame integrations,</text>
-  <text x="506" y="538" fill="#CABAA6" font-family="Arial, sans-serif" font-size="20">and cut repeated utility code.</text>
-  <rect x="856" y="430" width="328" height="126" rx="18" fill="#111111" stroke="#353535"/>
+  <text x="506" y="508" fill="#CABAA6" font-family="Arial, sans-serif" font-size="18">Ship internal tools faster, tame integrations,</text>
+  <text x="506" y="534" fill="#CABAA6" font-family="Arial, sans-serif" font-size="18">and cut repeated utility code.</text>
+  <rect x="856" y="430" width="328" height="120" rx="18" fill="#111111" stroke="#353535"/>
   <text x="886" y="472" fill="#F6EBDD" font-family="Arial, sans-serif" font-size="24">Proof</text>
-  <text x="886" y="510" fill="#CABAA6" font-family="Arial, sans-serif" font-size="20">Structured docs, premium assets, CI,</text>
-  <text x="886" y="538" fill="#CABAA6" font-family="Arial, sans-serif" font-size="20">example app, and accessible presentation.</text>
+  <text x="886" y="508" fill="#CABAA6" font-family="Arial, sans-serif" font-size="18">Structured docs, premium assets, CI,</text>
+  <text x="886" y="534" fill="#CABAA6" font-family="Arial, sans-serif" font-size="18">example app, and accessible presentation.</text>
   <defs>
     <linearGradient id="heroGradient" x1="92" y1="76" x2="1184" y2="284" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F5C985"/>
