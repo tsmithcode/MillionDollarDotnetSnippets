@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { pains, personas, proofs } from "@/lib/site-content";
+import { buildRecommendation, pains, personas, proofs } from "@/lib/site-content";
 
 type StepId = "persona" | "pain" | "proof";
 
@@ -24,21 +24,10 @@ export function Wizard() {
   const selectedPain = useMemo(() => pains.find((item) => item.id === painId) ?? pains[0], [painId]);
   const selectedProof = useMemo(() => proofs.find((item) => item.id === proofId) ?? proofs[0], [proofId]);
 
-  const recommendation = useMemo(() => {
-    if (selectedProof.route === "/about") {
-      return {
-        href: "/about",
-        title: "Start with the creator story",
-        detail: "You want authority and context first, so the founder page is the cleanest first step."
-      };
-    }
-
-    return {
-      href: "/proof",
-      title: "Start with live framework proof",
-      detail: `${selectedPersona.recommendation} ${selectedPain.summary}`
-    };
-  }, [selectedPain.summary, selectedPersona.recommendation, selectedProof.route]);
+  const recommendation = useMemo(
+    () => buildRecommendation(selectedPersona.id, selectedPain.id, selectedProof.id),
+    [selectedPain.id, selectedPersona.id, selectedProof.id]
+  );
 
   return (
     <section className="wizard-panel" id="wizard" aria-labelledby="wizard-title">
@@ -149,11 +138,14 @@ export function Wizard() {
           </dl>
           <div className="allowed-box">
             <strong>Why this route is allowed</strong>
-            <p>
-              The recommendation is based on the proof layer you selected and keeps the first next step
-              short, auditable, and easy to understand.
-            </p>
+            <p>{recommendation.allowedReason}</p>
           </div>
+          {recommendation.blockedReason ? (
+            <div className="blocked-box">
+              <strong>What this does not optimize for</strong>
+              <p>{recommendation.blockedReason}</p>
+            </div>
+          ) : null}
           <a className="primary-action" href={recommendation.href}>
             Continue to recommended path
           </a>

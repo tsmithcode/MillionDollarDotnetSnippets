@@ -8,13 +8,14 @@ test("guided path and supporting pages render", async ({ page }) => {
 
   await page.getByRole("radio", { name: /make integrations reliable/i }).check();
   await page.getByRole("radio", { name: /diagnostics first/i }).check();
-  await expect(page.getByRole("link", { name: /continue to recommended path/i })).toHaveAttribute("href", "/proof");
+  await expect(page.getByRole("link", { name: /continue to recommended path/i })).toHaveAttribute("href", /\/proof/);
+  await expect(page.getByText(/why this route is allowed/i)).toBeVisible();
 
   await page.goto("/about");
   await expect(page.getByRole("heading", { name: /thomas smith built this framework/i })).toBeVisible();
 
   await page.goto("/proof");
   await expect(page.getByRole("heading", { name: /what the framework proves today/i })).toBeVisible();
-  await expect(page.getByText(/file source mode/i)).toBeVisible();
-  await expect(page.getByText(/http source mode/i)).toBeVisible();
+  await expect(page.getByText(/ingestion modes/i)).toBeVisible();
+  await expect(page.getByText(/work-1001/i)).toBeVisible();
 });

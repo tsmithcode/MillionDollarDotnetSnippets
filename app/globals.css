@@ -242,7 +242,10 @@ a {
 .signal-card,
 .detail-card,
 .recommendation-panel,
-.trace-panel {
+.trace-panel,
+.metric-card,
+.record-card,
+.blocked-box {
   background: var(--panel-soft);
   border: 1px solid var(--line);
   border-radius: 1.4rem;
@@ -351,7 +354,7 @@ a {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.8rem;
-  align-items: start;
+  align-items: flex-start;
   padding: 0.9rem 0;
   border-top: 1px solid var(--line);
 }
@@ -377,7 +380,7 @@ a {
 .recommendation-panel {
   display: grid;
   gap: 1rem;
-  align-self: start;
+  align-self: flex-start;
 }
 
 .decision-audit {
@@ -409,6 +412,65 @@ a {
   border: 1px solid var(--line);
 }
 
+.blocked-box {
+  background: rgba(223, 161, 91, 0.08);
+}
+
+.proof-metrics,
+.record-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.proof-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.metric-card h3,
+.record-card h4 {
+  margin: 0 0 0.45rem;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.metric-value {
+  margin: 0 0 0.3rem;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent-soft);
+  line-height: 1;
+}
+
+.metric-card p,
+.record-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.record-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.record-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  min-width: 5.5rem;
+}
+
 .detail-hero,
 .detail-narrative {
   display: grid;
@@ -422,7 +484,7 @@ a {
 }
 
 .proof-layout {
-  align-items: start;
+  align-items: flex-start;
 }
 
 .signal-list {
@@ -446,7 +508,9 @@ a {
   .hero-card-grid,
   .detail-grid,
   .support-columns,
-  .progress-meter {
+  .progress-meter,
+  .proof-metrics,
+  .record-grid {
     grid-template-columns: 1fr;
   }
 

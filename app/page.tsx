@@ -62,6 +62,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="support-panel" aria-labelledby="roadmap-heading">
+        <div>
+          <p className="eyebrow">Current release focus</p>
+          <h2 id="roadmap-heading" className="section-title">
+            The site now behaves more like a product router than a static landing page.
+          </h2>
+        </div>
+        <div className="support-columns">
+          <div>
+            <h3>Persona-aware routing</h3>
+            <p>The recommendation now changes based on who you are, what hurts, and what kind of proof you need first.</p>
+          </div>
+          <div>
+            <h3>Allowed and blocked reasoning</h3>
+            <p>The wizard explains why a route is recommended and what it does not optimize for, so the logic stays inspectable.</p>
+          </div>
+          <div>
+            <h3>Live-feeling proof surface</h3>
+            <p>The proof page now exposes metrics, concrete records, and capability evidence instead of relying on generic promise copy.</p>
+          </div>
+        </div>
+      </section>
+
       <Wizard />
     </div>
   );

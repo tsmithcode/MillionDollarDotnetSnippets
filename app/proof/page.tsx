@@ -1,3 +1,5 @@
+import { capabilityCards, proofRecords, proofStats } from "@/lib/site-content";
+
 const traceLines = [
   "Promote urgent work: Applied and set 'Status' to 'Escalated'.",
   "Route CAD work: Applied and set 'Queue' to 'Engineering Automation'.",
@@ -16,7 +18,17 @@ export default function ProofPage() {
         </p>
       </section>
 
-      <section className="proof-layout">
+      <section className="proof-metrics" id="success" aria-label="Framework proof metrics">
+        {proofStats.map((stat) => (
+          <article className="metric-card" key={stat.label}>
+            <p className="metric-value">{stat.value}</p>
+            <h3>{stat.label}</h3>
+            <p>{stat.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="proof-layout" id="proof-grid">
         <article className="detail-card" id="architecture">
           <h3>Architecture</h3>
           <ul className="signal-list">
@@ -41,7 +53,7 @@ export default function ProofPage() {
         </article>
       </section>
 
-      <section className="proof-summary">
+      <section className="proof-summary" id="capabilities">
         <div className="proof-pill-row" aria-label="Proof highlights">
           <span>File source mode</span>
           <span>HTTP source mode</span>
@@ -49,27 +61,40 @@ export default function ProofPage() {
           <span>Queue outcomes shown</span>
         </div>
         <div className="detail-grid">
-          <article className="detail-card">
-            <h3>Zero-knowledge success marker</h3>
-            <p>
-              A first-time user should be able to run the quickstart and recognize success from the two
-              ingestion modes and the queue summary alone.
-            </p>
-          </article>
-          <article className="detail-card">
-            <h3>Browser confidence target</h3>
-            <p>
-              This site is set up to add Playwright-based browser and mobile proof so accessibility and
-              guided flow behavior can become release gates.
-            </p>
-          </article>
-          <article className="detail-card">
-            <h3>What comes next</h3>
-            <p>
-              Expand the wizard, connect more proof surfaces to the live framework, and treat the website
-              as a product entrypoint instead of a documentation wrapper.
-            </p>
-          </article>
+          {capabilityCards.map((card) => (
+            <article className="detail-card" key={card.title}>
+              <h3>{card.title}</h3>
+              <p>{card.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="proof-summary" aria-labelledby="records-heading">
+        <div>
+          <p className="eyebrow">Golden path records</p>
+          <h3 className="section-title" id="records-heading">
+            Two concrete records show what success and failure look like.
+          </h3>
+        </div>
+        <div className="record-grid">
+          {proofRecords.map((record) => (
+            <article className="record-card" key={record.id}>
+              <div className="record-head">
+                <div>
+                  <p className="eyebrow">{record.id}</p>
+                  <h4>{record.queue}</h4>
+                </div>
+                <span className="record-status">{record.status}</span>
+              </div>
+              <p>{record.summary}</p>
+              <ul className="signal-list">
+                {record.mode.map((mode) => (
+                  <li key={mode}>{mode}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
     </div>

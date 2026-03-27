@@ -3,6 +3,8 @@ export type PersonaOption = {
   label: string;
   summary: string;
   recommendation: string;
+  preferredProofs: string[];
+  topPainIds: string[];
 };
 
 export type PainOption = {
@@ -19,30 +21,46 @@ export type ProofOption = {
   route: string;
 };
 
+export type RecommendationRoute = {
+  href: string;
+  title: string;
+  detail: string;
+  allowedReason: string;
+  blockedReason?: string;
+};
+
 export const personas: PersonaOption[] = [
   {
     id: "consultant",
     label: "Consultant",
     summary: "You need reusable delivery leverage across multiple client environments.",
-    recommendation: "Start with the golden path to show visible ROI fast."
+    recommendation: "Start with the golden path to show visible ROI fast.",
+    preferredProofs: ["example", "diagnostics"],
+    topPainIds: ["tools", "integrations"]
   },
   {
     id: "architect",
     label: "Solution architect",
     summary: "You want reusable rules, integration seams, and auditable system behavior.",
-    recommendation: "Start with architecture and proof surfaces."
+    recommendation: "Start with architecture and proof surfaces.",
+    preferredProofs: ["architecture", "diagnostics"],
+    topPainIds: ["rules", "integrations"]
   },
   {
     id: "lead",
     label: "Engineering lead",
     summary: "You need a framework that lowers team ramp time and reduces one-off utility code.",
-    recommendation: "Start with diagnostics and adoption flow."
+    recommendation: "Start with diagnostics and adoption flow.",
+    preferredProofs: ["diagnostics", "example"],
+    topPainIds: ["tools", "reusable"]
   },
   {
     id: "operator",
     label: "Operations-minded builder",
     summary: "You care about delivery clarity, edge-case visibility, and explainable workflow behavior.",
-    recommendation: "Start with proof and validation trace output."
+    recommendation: "Start with proof and validation trace output.",
+    preferredProofs: ["diagnostics", "founder"],
+    topPainIds: ["integrations", "rules"]
   }
 ];
 
@@ -51,25 +69,25 @@ export const pains: PainOption[] = [
     id: "tools",
     label: "Ship internal tools faster",
     summary: "Use capability-first utilities and a repeatable quickstart to avoid rebuilding the same foundation every time.",
-    route: "/proof"
+    route: "/proof#success"
   },
   {
     id: "integrations",
     label: "Make integrations reliable",
     summary: "Start with file and HTTP-backed ingestion plus rule trace output that makes behavior easy to inspect.",
-    route: "/proof"
+    route: "/proof#proof-grid"
   },
   {
     id: "rules",
     label: "Build a rules and validation foundation",
     summary: "Use config-driven rule evaluation and explicit validation feedback to make business logic easier to audit.",
-    route: "/proof"
+    route: "/proof#diagnostics"
   },
   {
     id: "reusable",
     label: "Create reusable delivery blocks",
     summary: "Use Build Faster, Ship Safer, Automate More, and Integrate Messy Systems as the public framework surface.",
-    route: "/about"
+    route: "/proof#capabilities"
   }
 ];
 
@@ -78,7 +96,7 @@ export const proofs: ProofOption[] = [
     id: "example",
     label: "Example first",
     summary: "See the golden path and expected outputs before reading architecture.",
-    route: "/proof"
+    route: "/proof#success"
   },
   {
     id: "architecture",
@@ -118,3 +136,67 @@ export const capabilityCards = [
     detail: "Stabilize environment, parsing, and system boundaries when business software gets ugly."
   }
 ];
+
+export const proofStats = [
+  { label: "Ingestion modes", value: "2", detail: "File and HTTP-backed pipeline" },
+  { label: "Proof devices", value: "2", detail: "Desktop and mobile browser coverage" },
+  { label: "Validation visibility", value: "100%", detail: "Required field failures rendered explicitly" },
+  { label: "Rule trace clarity", value: "Per rule", detail: "Applied and skipped outcomes shown" }
+];
+
+export const proofRecords = [
+  {
+    id: "WORK-1001",
+    queue: "Engineering Automation",
+    status: "Escalated",
+    mode: ["File source mode", "HTTP source mode"],
+    summary: "Urgent CAD work is routed and escalated without ambiguity."
+  },
+  {
+    id: "WORK-1002",
+    queue: "Operations Systems",
+    status: "Unset",
+    mode: ["File source mode", "HTTP source mode"],
+    summary: "ERP work routes correctly but exposes missing status through validation."
+  }
+];
+
+export function buildRecommendation(personaId: string, painId: string, proofId: string): RecommendationRoute {
+  const persona = personas.find((item) => item.id === personaId) ?? personas[0];
+  const pain = pains.find((item) => item.id === painId) ?? pains[0];
+  const proof = proofs.find((item) => item.id === proofId) ?? proofs[0];
+
+  const personaPrefersProof = persona.preferredProofs.includes(proof.id);
+  const personaPainAligned = persona.topPainIds.includes(pain.id);
+
+  if (proof.id === "founder") {
+    return {
+      href: "/about",
+      title: "Start with the creator story",
+      detail: "You asked for credibility first, so the fastest route is the founder page and the delivery evidence behind it.",
+      allowedReason: "Founder-first is allowed because you selected creator credibility as the proof layer.",
+      blockedReason: pain.id === "integrations"
+        ? "This path does not show runtime integration proof first. Use the proof page next if you need system behavior before story."
+        : undefined
+    };
+  }
+
+  if (personaPrefersProof && personaPainAligned) {
+    return {
+      href: proof.route,
+      title: "Start with the recommended proof path",
+      detail: `${persona.recommendation} ${pain.summary}`,
+      allowedReason: "This route matches both your persona and the kind of delivery problem you selected."
+    };
+  }
+
+  return {
+    href: pain.route,
+    title: "Start with the fastest ROI proof",
+    detail: `${pain.summary} Then expand into ${proof.label.toLowerCase()} once you have first success.`,
+    allowedReason: "This route is allowed because it keeps the first step practical and short for a zero-knowledge user.",
+    blockedReason: personaPrefersProof
+      ? undefined
+      : `${proof.label} is not the strongest first stop for a ${persona.label.toLowerCase()} solving this specific problem.`
+  };
+}
