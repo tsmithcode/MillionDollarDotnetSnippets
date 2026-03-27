@@ -17,6 +17,16 @@ export const metadata: Metadata = createMetadata({
 export default function HomePage() {
   return (
     <div className="page-flow">
+      <section className="detail-card" role="alert" aria-live="polite">
+        <p className="eyebrow">Maintenance notice</p>
+        <h2 className="section-title">This product surface is actively being upgraded.</h2>
+        <p className="section-lead">
+          The framework, guided wizard, and proof layers are live and usable, but the team is still
+          refining content, accessibility, browser confidence, and leadership reporting as part of the
+          current flagship pass.
+        </p>
+      </section>
+
       <MotionSection className="hero-panel hero-poster">
         <div className="hero-copy">
           <p className="eyebrow">Million Dollar Dot Net Snippets</p>
