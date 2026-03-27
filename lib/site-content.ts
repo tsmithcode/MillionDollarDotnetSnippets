@@ -163,7 +163,7 @@ export const capabilityCards = [
 export const proofStats = [
   { label: "Ingestion modes", value: "2", detail: "File and HTTP-backed pipeline" },
   { label: "Proof devices", value: "2", detail: "Desktop and mobile browser coverage" },
-  { label: "Validation visibility", value: "100%", detail: "Required field failures rendered explicitly" },
+  { label: "Enterprise outputs", value: "4", detail: "Queue, connector, SLA, and approval routing shown" },
   { label: "Rule trace clarity", value: "Per rule", detail: "Applied and skipped outcomes shown" }
 ];
 
@@ -191,17 +191,24 @@ export const premiumArtifacts = [
 export const proofRecords = [
   {
     id: "WORK-1001",
-    queue: "Engineering Automation",
+    queue: "Enterprise Operations",
     status: "Escalated",
     mode: ["File source mode", "HTTP source mode"],
-    summary: "Urgent CAD work is routed and escalated without ambiguity."
+    summary: "Urgent ERP work receives connector, SLA, and executive approval routing without ambiguity."
   },
   {
     id: "WORK-1002",
-    queue: "Operations Systems",
+    queue: "Enterprise Operations",
     status: "Unset",
     mode: ["File source mode", "HTTP source mode"],
-    summary: "ERP work routes correctly but exposes missing status through validation."
+    summary: "Normal ERP work routes correctly but still surfaces missing escalation status through validation."
+  },
+  {
+    id: "WORK-1003",
+    queue: "Engineering Automation",
+    status: "Escalated",
+    mode: ["File source mode", "HTTP source mode"],
+    summary: "Urgent CAD work is routed into engineering automation with operations-level approval."
   }
 ];
 
@@ -231,11 +238,11 @@ export const leadershipMetrics = [
 export const marketReasons = [
   {
     title: "Messy-system leverage",
-    detail: "The framework is strongest where delivery teams lose margin: integrations, validation, rules, and repetitive internal tooling."
+    detail: "The framework is strongest where delivery teams lose margin: integrations, validation, rules, repetitive internal tooling, and operational routing."
   },
   {
-    title: "Proof-led adoption",
-    detail: "The site, golden path, browser gate, and diagnostics all reinforce the same claim instead of acting like disconnected surfaces."
+    title: "Enterprise workflow proof",
+    detail: "The flagship slice now shows connector assignment, SLA windows, approval lanes, and queue routing instead of generic helper behavior."
   },
   {
     title: "Civic-grade clarity",
@@ -277,6 +284,50 @@ export const leadershipTimeline = [
     phase: "Then",
     title: "Compounding framework adoption",
     detail: "More vertical slices, stronger integration modes, and clearer package distribution turn proof into repeatable usage."
+  }
+];
+
+export const commercializationOffers = [
+  {
+    title: "Open-core framework",
+    detail: "Keep the core product public and proof-rich so buyer trust compounds through transparent adoption.",
+    fit: "Best for distribution and authority building."
+  },
+  {
+    title: "Premium enterprise modules",
+    detail: "Reserve deeper integration packs, packaging accelerators, and flagship vertical slices for paid usage.",
+    fit: "Best for monetizing the strongest consultant ROI paths."
+  },
+  {
+    title: "Strategic advisory offer",
+    detail: "Use the framework as the operating system behind higher-value consulting, modernization, and integration delivery.",
+    fit: "Best for founder-led premium service leverage."
+  }
+];
+
+export const appraisalRange = {
+  current: "$1M-$3M",
+  expected: "$8M-$20M",
+  traction: "$20M-$50M+",
+  reason:
+    "The current site and proof layer are strong strategic assets, but the framework depth and monetization system still have meaningful upside."
+};
+
+export const operatingMetrics = [
+  {
+    label: "Release rhythm",
+    value: "Managed weekly",
+    detail: "A formal scorecard, release review, and risk register now define what leadership should inspect before shipping."
+  },
+  {
+    label: "Executive visibility",
+    value: "Single review layer",
+    detail: "Leadership, proof, appraisal, and operating risk are now consolidated into one product-facing reading system."
+  },
+  {
+    label: "Investor package",
+    value: "Prepared",
+    detail: "The product now has a repeatable package for category, moat, proof, appraisal, and next-step execution."
   }
 ];
 

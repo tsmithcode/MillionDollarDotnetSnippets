@@ -2,9 +2,13 @@
   {
     "Id": "WORK-1001",
     "Fields": {
-      "WorkType": "CAD",
+      "WorkType": "ERP",
       "Priority": "Urgent",
-      "Client": "Northwind"
+      "Client": "Northwind",
+      "Region": "US",
+      "CustomerTier": "Platinum",
+      "SourceSystem": "ERP",
+      "Amount": "240000"
     }
   },
   {
@@ -12,7 +16,23 @@
     "Fields": {
       "WorkType": "ERP",
       "Priority": "Normal",
-      "Client": "Contoso"
+      "Client": "Contoso",
+      "Region": "EU",
+      "CustomerTier": "Standard",
+      "SourceSystem": "ERP",
+      "Amount": "32000"
+    }
+  },
+  {
+    "Id": "WORK-1003",
+    "Fields": {
+      "WorkType": "CAD",
+      "Priority": "Urgent",
+      "Client": "Fabrikam",
+      "Region": "US",
+      "CustomerTier": "Gold",
+      "SourceSystem": "CAD",
+      "Amount": "87000"
     }
   }
 ]

@@ -14,8 +14,9 @@ export const metadata: Metadata = createMetadata({
 
 const traceLines = [
   "Promote urgent work: Applied and set 'Status' to 'Escalated'.",
-  "Route CAD work: Applied and set 'Queue' to 'Engineering Automation'.",
-  "Route ERP work: Skipped because 'CAD' did not match 'ERP'."
+  "Route ERP operations: Applied and set 'Queue' to 'Enterprise Operations'.",
+  "Assign ERP connector profile: Applied and set 'ConnectorProfile' to 'ERP-Bridge'.",
+  "Platinum tier requires executive approval: Applied and set 'ApprovalLane' to 'Executive Review'."
 ];
 
 export default function ProofPage() {
@@ -26,8 +27,8 @@ export default function ProofPage() {
         <p className="eyebrow">Proof surface</p>
         <h2 className="section-title">What the framework proves today in production-like terms.</h2>
         <p className="section-lead">
-          The current framework proves a buildable .NET product surface, a golden-path example, rule-by-rule
-          diagnostics, and dual ingestion from file and HTTP-backed sources.
+          The current framework now proves a flagship enterprise workflow: dual ingestion, rule-by-rule
+          diagnostics, connector routing, SLA assignment, approval lanes, and executive-readable operational output.
         </p>
       </MotionSection>
 
@@ -43,13 +44,13 @@ export default function ProofPage() {
 
       <section className="proof-layout proof-ledger" id="proof-grid">
         <article className="detail-card" id="architecture">
-          <h3>Architecture</h3>
+          <h3>Flagship workflow</h3>
           <ul className="signal-list">
-            <li>Core contracts and records</li>
-            <li>Application orchestration</li>
-            <li>Infrastructure boundaries</li>
-            <li>Rules engine behavior</li>
-            <li>Capability-first public API surface</li>
+            <li>ERP and CAD records ingested from file and HTTP-backed sources</li>
+            <li>Connector profile assignment based on source system</li>
+            <li>SLA windows assigned from operating region</li>
+            <li>Approval lanes assigned from customer tier</li>
+            <li>Queue and escalation outcomes emitted for delivery teams</li>
           </ul>
         </article>
         <article className="detail-card" id="diagnostics">
@@ -70,8 +71,9 @@ export default function ProofPage() {
         <div className="proof-pill-row" aria-label="Proof highlights">
           <span>File source mode</span>
           <span>HTTP source mode</span>
-          <span>Validation issues surfaced</span>
-          <span>Queue outcomes shown</span>
+          <span>Connector profile shown</span>
+          <span>SLA window shown</span>
+          <span>Approval lane shown</span>
         </div>
         <CapabilityGrid>
           {capabilityCards.map((card) => (
@@ -86,7 +88,7 @@ export default function ProofPage() {
       <SurfacePanel aria-labelledby="records-heading">
         <SectionHeader
           eyebrow="Golden path records"
-          title="Two concrete records show what success and failure look like."
+          title="Three enterprise records show escalation, validation failure, and cross-system routing."
           titleId="records-heading"
         />
         <div className="record-grid">

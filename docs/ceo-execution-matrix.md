@@ -133,8 +133,8 @@ The biggest remaining uplift comes from:
 
 Current active phase:
 
-- `Phase 1: Architecture Truth Pass`
+- `Phase 7: Operating Company Excellence Pass`
 
-The next checkpoint question after Phase 1 is:
+The next checkpoint question after Phase 7 is:
 
-- `Continue to Phase 2?`
+- `Continue to Phase 8?`

@@ -2,7 +2,15 @@ import type { Metadata } from "next";
 import { MotionSection } from "@/components/motion/motion-section";
 import { PageTelemetry } from "@/components/telemetry/telemetry-client";
 import { SurfacePanel } from "@/components/ui/surfaces";
-import { leadershipMetrics, leadershipQuestions, leadershipTimeline, marketReasons } from "@/lib/site-content";
+import {
+  appraisalRange,
+  commercializationOffers,
+  leadershipMetrics,
+  leadershipQuestions,
+  leadershipTimeline,
+  marketReasons,
+  operatingMetrics
+} from "@/lib/site-content";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -94,6 +102,68 @@ export default function LeadershipPage() {
             <article className="timeline-card" key={item.phase}>
               <span>{item.phase}</span>
               <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </SurfacePanel>
+
+      <SurfacePanel aria-labelledby="commercial-model-title">
+        <div className="leadership-intro">
+          <p className="eyebrow">Commercial model</p>
+          <h2 className="section-title" id="commercial-model-title">
+            The business path is becoming clearer, not broader.
+          </h2>
+        </div>
+        <div className="leadership-question-grid">
+          {commercializationOffers.map((offer) => (
+            <article className="leadership-question" key={offer.title}>
+              <h3>{offer.title}</h3>
+              <p>{offer.detail}</p>
+              <p className="leadership-note">{offer.fit}</p>
+            </article>
+          ))}
+        </div>
+      </SurfacePanel>
+
+      <SurfacePanel aria-labelledby="appraisal-title">
+        <div className="leadership-intro">
+          <p className="eyebrow">Appraisal lens</p>
+          <h2 className="section-title" id="appraisal-title">
+            Current value is credible, but the bigger upside still depends on deeper framework proof.
+          </h2>
+        </div>
+        <div className="leadership-band-grid" aria-label="Appraisal ranges">
+          <article className="leadership-band-card">
+            <span>Current blended range</span>
+            <h3>{appraisalRange.current}</h3>
+            <p>{appraisalRange.reason}</p>
+          </article>
+          <article className="leadership-band-card">
+            <span>Expected after execution</span>
+            <h3>{appraisalRange.expected}</h3>
+            <p>Assumes the commercialization model, enterprise proof slices, and packaging depth are executed well.</p>
+          </article>
+          <article className="leadership-band-card">
+            <span>With early traction</span>
+            <h3>{appraisalRange.traction}</h3>
+            <p>Requires real adoption, paid usage, or strategic consulting pull on top of the current product quality.</p>
+          </article>
+        </div>
+      </SurfacePanel>
+
+      <SurfacePanel aria-labelledby="operating-visibility-title">
+        <div className="leadership-intro">
+          <p className="eyebrow">Operating company layer</p>
+          <h2 className="section-title" id="operating-visibility-title">
+            The company now has explicit operating artifacts, not just a polished product surface.
+          </h2>
+        </div>
+        <div className="leadership-band-grid" aria-label="Operating company metrics">
+          {operatingMetrics.map((item) => (
+            <article className="leadership-band-card" key={item.label}>
+              <span>{item.label}</span>
+              <h3>{item.value}</h3>
               <p>{item.detail}</p>
             </article>
           ))}

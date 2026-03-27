@@ -20,6 +20,7 @@ This folder defines the current org model for MillionDollarDotnetSnippets.
 - [Performance Engineering Lead](./performance-engineering-lead.md)
 - [Security and Trust Lead](./security-trust-lead.md)
 - [Investor Narrative and Strategy Lead](./investor-narrative-strategy-lead.md)
+- [Enterprise Workflow Delivery Lead](./enterprise-workflow-delivery-lead.md)
 
 ## Sovereign-budget benchmark advisors
 

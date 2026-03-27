@@ -194,6 +194,10 @@ Expected appraisal movement:
 - expected post-phase outcome: `$8M-$20M`
 - with early traction: `$20M-$50M+`
 
+Checkpoint after completion:
+
+- `Continue to Phase 6?`
+
 ### Phase 6: Flagship Enterprise Proof Pass
 
 Add if missing:
@@ -219,6 +223,10 @@ Expected score movement:
 - framework depth: `8.4 -> 9.2`
 - commercial readiness: `9.2 -> 9.5`
 
+Checkpoint after completion:
+
+- `Continue to Phase 7?`
+
 ### Phase 7: Operating Company Excellence Pass
 
 Add if missing:
@@ -242,6 +250,11 @@ Expected score movement:
 - release operations and visibility: `8.5 -> 9.8`
 - leadership readability: `9.8 -> 10.0`
 - executive operating visibility: `8.5 -> 9.9`
+
+Checkpoint after completion:
+
+- `Continue to Phase 8?`
+  Default answer can be no if the operating standard is now where the company needs it.
 
 ## Benchmark table
 
