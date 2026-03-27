@@ -1,6 +1,8 @@
 # Role Charters and Scorecards
 
-This folder defines the current enterprise-level specialist team for MillionDollarDotnetSnippets.
+This folder defines the current org model for MillionDollarDotnetSnippets.
+
+## Core execution team
 
 - [Senior .NET Architect / Library Owner](./senior-dotnet-architect.md)
 - [Technical Writer / Developer Experience Editor](./technical-writer-dx-editor.md)
@@ -19,4 +21,20 @@ This folder defines the current enterprise-level specialist team for MillionDoll
 - [Security and Trust Lead](./security-trust-lead.md)
 - [Investor Narrative and Strategy Lead](./investor-narrative-strategy-lead.md)
 
-Use these documents for hiring, onboarding, and performance calibration.
+## Sovereign-budget benchmark advisors
+
+These are not represented as literal employment claims.
+They are benchmark-caliber roles used to raise execution quality, appraisal discipline, and stretch standards.
+
+- [Human Interface and Product Design Director](./human-interface-product-design-director.md)
+- [Cross-Platform Design Systems Director](./cross-platform-design-systems-director.md)
+- [Product Intelligence and Guided Experience Director](./product-intelligence-guided-experience-director.md)
+- [Enterprise Platform and Architecture Director](./enterprise-platform-architecture-director.md)
+- [Enterprise Integration Architecture Lead](./enterprise-integration-architecture-lead.md)
+- [Developer Platform and Packaging Director](./developer-platform-packaging-director.md)
+- [Accessibility and Inclusive Experience Director](./accessibility-inclusive-experience-director.md)
+- [Software Valuation and Strategic Finance Advisor](./software-valuation-strategic-finance-advisor.md)
+- [Technical Due Diligence Advisor](./technical-due-diligence-advisor.md)
+- [Strategic M&A and Product Value Advisor](./strategic-ma-product-value-advisor.md)
+
+Use these documents for hiring, onboarding, benchmarking, and performance calibration.

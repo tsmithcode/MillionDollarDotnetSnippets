@@ -135,6 +135,7 @@ Implementation map: [snippet_category_impact_mapping.md](/Users/cadguardianllc/D
 - brand assets and identity in `assets/`
 - indexed product, persona, and operating docs in `docs/`
 - GitHub contribution and CI scaffolding in `.github/`
+- a sovereign-budget benchmark advisor layer for architecture, appraisal, trust, and premium execution planning
 
 ## Start in 60 Seconds
 
@@ -202,6 +203,24 @@ This repo is being built like a technology-enabled product company artifact, not
 - explicit accessibility standards for docs and SVG assets
 - explicit contributor and governance surface
 - room for the team to fully revise vision and presentation from the title alone
+- an expert-benchmarked phased execution model for architecture, product intelligence, trust, packaging, and appraisal
+
+## Org and Execution Model
+
+The repo now distinguishes between:
+
+- core execution team
+- sovereign-budget benchmark advisors
+
+The core team ships.
+The benchmark advisors raise the bar, direct the next highest-ROI phase, and sharpen architecture and valuation quality.
+
+Supporting docs:
+
+- [Role Charters](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/roles/README.md)
+- [Operating Model](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/operating-model.md)
+- [CEO Execution Matrix](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/ceo-execution-matrix.md)
+- [Sovereign Expert Consultation](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/sovereign-expert-consultation.md)
 
 ## Accessibility and Premium Standard
 

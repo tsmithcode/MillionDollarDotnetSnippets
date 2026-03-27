@@ -18,6 +18,9 @@ The biggest remaining uplift comes from:
 - trust and enterprise posture
 - executive operating visibility
 - investor-grade strategic narrative
+- deeper framework architecture
+- flagship integration value
+- packaging and appraisal clarity
 
 ## Execution Matrix
 
@@ -35,6 +38,10 @@ The biggest remaining uplift comes from:
 | Release operations and visibility | 8.5 | 9.7 | Platform / Release Engineer | Executive Product Operations Lead | Shipping works, but executive visibility and risk tracking can be stronger. |
 | Leadership and investor readability | 8.7 | 9.6 | Executive Product Operations Lead | Investor Narrative and Strategy Lead | The leadership page is strong, but reporting rhythm and strategic framing are still young. |
 | Adoption and public conversion readiness | 8.0 | 9.3 | Growth Product Marketer / Content Lead | Developer Relations / Community Lead | The product is much more legible, but public proof assets and distribution mechanics are still early. |
+| .NET framework depth | 6.9 | 9.2 | Senior .NET Architect / Library Owner | Enterprise Platform and Architecture Director | The site and product story are ahead of the framework's current commercial depth. |
+| Integration architecture | 6.3 | 9.3 | Senior .NET Architect / Library Owner | Enterprise Integration Architecture Lead | The current proof slice shows value, but not yet the strongest messy-system moat. |
+| Packaging / adoption / DX | 6.4 | 9.1 | Platform / Release Engineer | Developer Platform and Packaging Director | Installation, package strategy, and reusable developer entrypoints still need to mature. |
+| Commercial readiness | 6.1 | 9.5 | Product / Positioning Lead | Strategic M&A and Product Value Advisor | The product story is strong, but monetization and strategic value packaging are still early. |
 
 ## Added CEO-Visible Experts
 
@@ -58,13 +65,76 @@ The biggest remaining uplift comes from:
 - purpose: make the business logic and moat legible without inflating claims
 - success signal: strategic readers immediately understand category, audience quality, and why this product compounds
 
+## Sovereign-Budget Benchmark Advisors
+
+### Human Interface and Product Design Director
+
+- purpose: raise the premium product bar to flagship quality across desktop and mobile
+- benchmark reference: Apple-caliber human interface leadership profile
+
+### Cross-Platform Design Systems Director
+
+- purpose: unify site, repo, assets, and executive surfaces into one design system
+- benchmark reference: Microsoft-scale design systems leadership profile
+
+### Product Intelligence and Guided Experience Director
+
+- purpose: turn the wizard into a genuinely guided product system
+- benchmark reference: Fortune 100 product and AI experience leadership profile
+
+### Enterprise Platform and Architecture Director
+
+- purpose: align the website, framework, docs, samples, and telemetry into one explicit product architecture
+- benchmark reference: Fortune 100 CTO and platform architecture profile
+
+### Enterprise Integration Architecture Lead
+
+- purpose: make messy-system leverage the strongest commercial proof slice
+- benchmark reference: Fortune 100 enterprise integration architecture profile
+
+### Developer Platform and Packaging Director
+
+- purpose: improve installability, packaging, samples, and reusable developer entrypoints
+- benchmark reference: Fortune 100 SDK and platform profile
+
+### Accessibility and Inclusive Experience Director
+
+- purpose: make civic-grade accessibility a defining product advantage
+- benchmark reference: civic-grade accessibility leadership profile
+
+### Software Valuation and Strategic Finance Advisor
+
+- purpose: define the disciplined current and expected product appraisal lens
+- benchmark reference: software and IP valuation specialist profile
+
+### Technical Due Diligence Advisor
+
+- purpose: simulate high-scrutiny enterprise and investor technical review
+- benchmark reference: enterprise software diligence profile
+
+### Strategic M&A and Product Value Advisor
+
+- purpose: identify the fastest path to higher strategic product value
+- benchmark reference: strategic product acquisition valuation profile
+
 ## Next Execution Pass
 
 | Step | Owner | Outcome |
 |---|---|---|
-| Establish weekly executive scorecard and risk register | Executive Product Operations Lead | CEO can see status, blockers, and release confidence in one place |
-| Profile homepage and wizard on constrained devices | Performance Engineering Lead | real performance bottlenecks identified and prioritized |
-| Tighten hero, motion, and 3D payload cost | Performance Engineering Lead | premium feel preserved while speed improves |
-| Run trust review across dependencies, deployment, and public posture | Security and Trust Lead | enterprise trust gaps become explicit and actionable |
-| Refine leadership page and external strategic summary | Investor Narrative and Strategy Lead | stronger investor and executive readability |
-| Package updated proof, performance, and trust signals into release review | Executive Product Operations Lead | leadership sees compounding quality, not scattered progress |
+| Phase 1: Architecture Truth Pass | Senior .NET Architect / Library Owner | website, framework, docs, telemetry, packages, and proof surfaces aligned into one explicit product architecture |
+| Phase 2: Guided Product Intelligence Pass | Frontend Product Experience Engineer | wizard, founder, proof, and leadership surfaces become more explainable and role-aware |
+| Phase 3: Enterprise Trust and Accessibility Pass | Security and Trust Lead | civic-grade accessibility, richer browser realism, and durable trust posture are formalized |
+| Phase 4: Premium Systems and Asset Pass | Design / Brand Systems Lead | flagship multi-surface asset system raises the premium standard |
+| Phase 5: Commercialization and Appraisal Pass | Investor Narrative and Strategy Lead | disciplined current-state and expected-state value become legible to leadership |
+| Phase 6: Flagship Enterprise Proof Pass | Senior .NET Architect / Library Owner | one undeniable messy-system enterprise proof slice raises framework credibility |
+| Phase 7: Operating Company Excellence Pass | Executive Product Operations Lead | weekly scorecards, risk register, and investor review package become institutional |
+
+## Phase checkpoint
+
+Current active phase:
+
+- `Phase 1: Architecture Truth Pass`
+
+The next checkpoint question after Phase 1 is:
+
+- `Continue to Phase 2?`

@@ -45,3 +45,31 @@ The new structure is the right direction, but the repo still needs continued ite
   Now owns the public surface as a guided framework wizard instead of a static marketing site.
 - Browser & Device Reliability Engineer
   Now owns real browser and device proof in production-like conditions, including release confidence for accessibility-critical flows.
+
+## Sovereign-budget consultation outcome
+
+We also consulted a sovereign-budget benchmark layer to answer a different question:
+
+what roles would a world-class product company add if budget were unconstrained and the goal were to make the current product fully earn its promise faster?
+
+That consultation produced these additions:
+
+- Human Interface and Product Design Director
+- Cross-Platform Design Systems Director
+- Product Intelligence and Guided Experience Director
+- Enterprise Platform and Architecture Director
+- Enterprise Integration Architecture Lead
+- Developer Platform and Packaging Director
+- Accessibility and Inclusive Experience Director
+- Software Valuation and Strategic Finance Advisor
+- Technical Due Diligence Advisor
+- Strategic M&A and Product Value Advisor
+
+These roles are represented as benchmark-caliber references, not literal employment claims.
+
+Their job in the org model is to:
+
+- raise the quality bar
+- direct the next highest-ROI phase
+- expose missing specialists before later-phase work starts
+- sharpen current and expected product appraisal

@@ -18,6 +18,13 @@ The project may evolve beyond its current structure if that makes it:
 
 The repo uses domain ownership, not committee ownership.
 
+The org has two layers:
+
+- Core execution team
+  named owners who ship work and hold direct release authority
+- Sovereign-budget benchmark advisors
+  benchmark-caliber roles that raise standards, direct specialist focus, and sharpen appraisal and architecture quality without being represented as literal employment claims
+
 - The Senior .NET Architect owns codebase structure, package boundaries, API shape, examples architecture, dependency choices, test standards, and technical cuts.
 - The Technical Writer / Developer Experience Editor owns README, documentation voice, naming clarity, learning flow, examples narrative, and removal of hype that weakens trust.
 - The QA / Test Automation Engineer owns acceptance criteria, CI quality bars, support matrix, failure thresholds, and what cannot ship without proof.
@@ -34,6 +41,16 @@ The repo uses domain ownership, not committee ownership.
 - The Performance Engineering Lead owns performance budgets, route-level speed discipline, motion and 3D cost control, and mobile runtime quality.
 - The Security and Trust Lead owns public trust posture, deployment hygiene, dependency discipline, and security-related release blockers.
 - The Investor Narrative and Strategy Lead owns investor-legible category framing, moat narrative, strategic proof packaging, and external strategic clarity.
+- The Human Interface and Product Design Director sets the benchmark for flagship product hierarchy, product readability, and premium interaction discipline.
+- The Cross-Platform Design Systems Director sets the benchmark for system-level consistency across the site, repo, assets, and executive-facing surfaces.
+- The Product Intelligence and Guided Experience Director sets the benchmark for recommendation logic, guided-product behavior, and explainable onboarding.
+- The Enterprise Platform and Architecture Director sets the benchmark for system architecture across web, framework, docs, telemetry, proof, and package surfaces.
+- The Enterprise Integration Architecture Lead sets the benchmark for flagship messy-system leverage and enterprise-grade integration proof.
+- The Developer Platform and Packaging Director sets the benchmark for installability, SDK surface quality, samples, and package strategy.
+- The Accessibility and Inclusive Experience Director sets the benchmark for civic-grade accessibility, inclusivity, and usability clarity.
+- The Software Valuation and Strategic Finance Advisor sets the benchmark for disciplined current-state and expected-state appraisal.
+- The Technical Due Diligence Advisor sets the benchmark for enterprise-grade technical scrutiny across architecture, trust, and proof.
+- The Strategic M&A and Product Value Advisor sets the benchmark for product value creation and strategic buyer readiness.
 
 ## Authority Rules
 
@@ -56,6 +73,7 @@ The repo uses domain ownership, not committee ownership.
 - Performance conflicts are resolved by the Performance Engineering Lead and Frontend Product Experience Engineer together, with release-blocking authority when experience quality falls below agreed budgets.
 - Security and trust conflicts are resolved by the Security and Trust Lead and Platform / Release Engineer together, with release-blocking authority when enterprise trust posture is materially weak.
 - Executive reporting and prioritization conflicts are resolved by the Executive Product Operations Lead and Product / Positioning Lead together, with the founder deciding only when mission scope is genuinely in dispute.
+- Benchmark-advisor conflicts are resolved by the relevant core domain owner, with advisors acting as quality-raising references rather than replacing core shipping authority.
 
 ## Weekly Operating Cadence
 
@@ -87,3 +105,12 @@ Success means the repo becomes a project that senior specialists want to own:
 - low micromanagement
 - fast decisions
 - clear accountability
+
+## Sovereign-Budget Rule
+
+When sovereign-budget benchmark advisors are consulted:
+
+- they produce the quality bar, not committee sprawl
+- they direct the relevant core owners toward the highest-ROI move
+- they may expose missing specialists required for a later phase
+- every phased execution pass must end with an explicit `Continue to next phase?` checkpoint
