@@ -161,6 +161,81 @@ export const proofRecords = [
   }
 ];
 
+export const leadershipMetrics = [
+  {
+    label: "Primary buyer",
+    value: "High-value .NET consultants",
+    detail: "Built for consultants, architects, and technical leads who monetize delivery leverage."
+  },
+  {
+    label: "Product category",
+    value: "Consultant acceleration framework",
+    detail: "More than snippets: guided adoption, auditable proof, and reusable .NET building blocks."
+  },
+  {
+    label: "Release confidence",
+    value: "9/9 gate checks",
+    detail: "Chromium, WebKit, and mobile flows now pass guided, keyboard, and reduced-motion proof."
+  },
+  {
+    label: "Founder authority",
+    value: "ERP + CAD + modernization",
+    detail: "Grounded in enterprise integration, Autodesk-platform work, and governed system delivery."
+  }
+];
+
+export const marketReasons = [
+  {
+    title: "Messy-system leverage",
+    detail: "The framework is strongest where delivery teams lose margin: integrations, validation, rules, and repetitive internal tooling."
+  },
+  {
+    title: "Proof-led adoption",
+    detail: "The site, golden path, browser gate, and diagnostics all reinforce the same claim instead of acting like disconnected surfaces."
+  },
+  {
+    title: "Civic-grade clarity",
+    detail: "The product is designed to stay legible for zero-knowledge users while still satisfying executive and technical scrutiny."
+  }
+];
+
+export const leadershipQuestions = [
+  {
+    title: "What is it?",
+    answer: "A premium .NET consultant acceleration framework presented through a guided, accessible product surface."
+  },
+  {
+    title: "Who is it for?",
+    answer: "Consultants, architects, and leads responsible for difficult delivery work where speed, trust, and reuse all matter."
+  },
+  {
+    title: "Why does it win?",
+    answer: "It combines framework leverage, explicit diagnostics, founder credibility, and release-grade browser proof in one coherent system."
+  },
+  {
+    title: "What is proven today?",
+    answer: "A buildable .NET product, dual-ingestion golden path, auditable rules, mobile-ready UX, and cross-browser release confidence."
+  }
+];
+
+export const leadershipTimeline = [
+  {
+    phase: "Now",
+    title: "Flagship product surface",
+    detail: "Guided wizard, founder page, proof page, cinematic hero, and browser/device release gating are live."
+  },
+  {
+    phase: "Next",
+    title: "Launch-grade narrative assets",
+    detail: "Leadership review, investor framing, social previews, and richer examples make the repo more legible outside engineering."
+  },
+  {
+    phase: "Then",
+    title: "Compounding framework adoption",
+    detail: "More vertical slices, stronger integration modes, and clearer package distribution turn proof into repeatable usage."
+  }
+];
+
 export function buildRecommendation(personaId: string, painId: string, proofId: string): RecommendationRoute {
   const persona = personas.find((item) => item.id === personaId) ?? personas[0];
   const pain = pains.find((item) => item.id === painId) ?? pains[0];

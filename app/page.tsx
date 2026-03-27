@@ -1,89 +1,144 @@
-import { capabilityCards } from "@/lib/site-content";
+import { CanvasStage } from "@/components/three/canvas-stage";
+import { MotionSection } from "@/components/motion/motion-section";
+import { StaggerGroup, StaggerItem } from "@/components/motion/stagger-group";
+import { ButtonLink } from "@/components/ui/button-link";
+import { capabilityCards, leadershipMetrics, proofStats } from "@/lib/site-content";
 import { Wizard } from "@/components/wizard";
 
 export default function HomePage() {
   return (
     <div className="page-flow">
-      <section className="hero-panel">
+      <MotionSection className="hero-panel hero-poster">
         <div className="hero-copy">
-          <p className="eyebrow">Guided onboarding for high-value .NET delivery work</p>
-          <h2 className="hero-title">A framework wizard with civic-grade clarity and premium product discipline.</h2>
+          <p className="eyebrow">Million Dollar Dot Net Snippets</p>
+          <h2 className="hero-title">Reusable .NET leverage for the people who carry difficult software delivery.</h2>
           <p className="hero-body">
-            This is not a marketing brochure. It is a decision-guided path for consultants, architects,
-            and technical leads who need to know what the framework is, why it matters, and how to use
-            it fast.
+            A guided framework experience for consultants, architects, and technical leads who need a
+            sharper delivery stack, credible proof, and a product surface that feels as disciplined as the
+            code underneath it.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#wizard">
-              Start guided path
-            </a>
-            <a className="secondary-action" href="/proof">
-              See browser-ready proof
-            </a>
+            <ButtonLink href="#wizard">Start the framework wizard</ButtonLink>
+            <ButtonLink href="/proof" tone="secondary">
+              See the proof surface
+            </ButtonLink>
+            <ButtonLink href="/leadership" tone="secondary">
+              Open leadership review
+            </ButtonLink>
           </div>
         </div>
+
         <div className="hero-proof" aria-label="Product confidence summary">
           <div className="proof-band">
-            <span>Buildable .NET framework</span>
-            <span>Auditable rules</span>
-            <span>Zero-knowledge path</span>
+            <span>Cross-platform surface</span>
+            <span>Accessible by default</span>
+            <span>Auditable logic</span>
           </div>
-          <div className="hero-card-grid">
-            {capabilityCards.map((card) => (
-              <article className="signal-card" key={card.title}>
+          <StaggerGroup className="hero-stat-grid">
+            {proofStats.slice(0, 3).map((stat) => (
+              <StaggerItem key={stat.label}>
+                <article className="hero-stat">
+                  <p>{stat.value}</p>
+                  <span>{stat.label}</span>
+                </article>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+          <CanvasStage />
+        </div>
+      </MotionSection>
+
+      <MotionSection className="editorial-band editorial-band-immersive" delay={0.05}>
+        <div className="editorial-intro">
+          <p className="eyebrow">Why this product feels different</p>
+          <h2 className="section-title">The public surface behaves like guided infrastructure, not brochureware.</h2>
+        </div>
+        <StaggerGroup className="editorial-rail">
+          <StaggerItem>
+            <article>
+              <h3>Clarity under pressure</h3>
+              <p>Every major state is readable, explainable, and operable on mobile without degrading trust.</p>
+            </article>
+          </StaggerItem>
+          <StaggerItem>
+            <article>
+              <h3>Story with proof</h3>
+              <p>The founder authority, the wizard logic, and the framework outputs reinforce the same market truth.</p>
+            </article>
+          </StaggerItem>
+          <StaggerItem>
+            <article>
+              <h3>Premium by restraint</h3>
+              <p>The interface uses stronger hierarchy, calmer surfaces, and less clutter so ambition feels controlled.</p>
+            </article>
+          </StaggerItem>
+        </StaggerGroup>
+      </MotionSection>
+
+      <MotionSection className="capability-ribbon capability-ribbon-immersive" aria-labelledby="capability-heading" delay={0.08}>
+        <div className="editorial-intro">
+          <p className="eyebrow">Framework capability</p>
+          <h2 className="section-title" id="capability-heading">
+            Four capability lanes, one delivery mission.
+          </h2>
+        </div>
+        <StaggerGroup className="ribbon-grid">
+          {capabilityCards.map((card) => (
+            <StaggerItem key={card.title}>
+              <article className="ribbon-card">
                 <h3>{card.title}</h3>
                 <p>{card.detail}</p>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+      </MotionSection>
 
-      <section className="support-panel" aria-labelledby="support-heading">
-        <div>
-          <p className="eyebrow">What makes this feel different</p>
-          <h2 id="support-heading" className="section-title">
-            The first-time user path is treated like critical infrastructure.
-          </h2>
+      <MotionSection className="vision-band" delay={0.12}>
+        <div className="vision-band-copy">
+          <p className="eyebrow">Execution standard</p>
+          <h2 className="section-title">Ambition without chaos. Motion without noise. Proof without hand-waving.</h2>
+          <p className="section-lead">
+            The visual system is now designed to carry a more ambitious name and mission while keeping the
+            interaction model calm, legible, and operationally trustworthy.
+          </p>
         </div>
-        <div className="support-columns">
-          <div>
-            <h3>Accessible by default</h3>
-            <p>Large targets, plain language, explicit next steps, and visible allowed or blocked reasoning.</p>
-          </div>
-          <div>
-            <h3>Story plus proof</h3>
-            <p>The creator story, the framework promise, and the runtime proof all reinforce each other.</p>
-          </div>
-          <div>
-            <h3>Built for pressure</h3>
-            <p>The interface is calm and legible enough to make sense under time pressure, not just look good in a screenshot.</p>
-          </div>
+        <div className="vision-band-notes">
+          <article>
+            <h3>Clarity under pressure</h3>
+            <p>Every animation, 3D decision, and reveal is expected to preserve orientation rather than compete with it.</p>
+          </article>
+          <article>
+            <h3>Reduced-motion safe</h3>
+            <p>The product still works cleanly when users prefer less animation, so premium never comes at the cost of access.</p>
+          </article>
+          <article>
+            <h3>3D as narrative support</h3>
+            <p>The stage is there to create atmosphere and memory, not to block the wizard or dilute the product message.</p>
+          </article>
         </div>
-      </section>
+      </MotionSection>
 
-      <section className="support-panel" aria-labelledby="roadmap-heading">
-        <div>
-          <p className="eyebrow">Current release focus</p>
-          <h2 id="roadmap-heading" className="section-title">
-            The site now behaves more like a product router than a static landing page.
-          </h2>
+      <MotionSection className="leadership-band" delay={0.15}>
+        <div className="leadership-band-copy">
+          <p className="eyebrow">CEO and investor visibility</p>
+          <h2 className="section-title">The product now has a clean executive reading path, not just a technical one.</h2>
+          <p className="section-lead">
+            Leadership can review the buyer, the category, the release confidence, and the founder advantage
+            without reverse-engineering the repo.
+          </p>
+          <ButtonLink href="/leadership">Review the leadership surface</ButtonLink>
         </div>
-        <div className="support-columns">
-          <div>
-            <h3>Persona-aware routing</h3>
-            <p>The recommendation now changes based on who you are, what hurts, and what kind of proof you need first.</p>
-          </div>
-          <div>
-            <h3>Allowed and blocked reasoning</h3>
-            <p>The wizard explains why a route is recommended and what it does not optimize for, so the logic stays inspectable.</p>
-          </div>
-          <div>
-            <h3>Live-feeling proof surface</h3>
-            <p>The proof page now exposes metrics, concrete records, and capability evidence instead of relying on generic promise copy.</p>
-          </div>
+        <div className="leadership-band-grid" aria-label="Leadership review highlights">
+          {leadershipMetrics.slice(0, 3).map((item) => (
+            <article className="leadership-band-card" key={item.label}>
+              <span>{item.label}</span>
+              <h3>{item.value}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
         </div>
-      </section>
+      </MotionSection>
 
       <Wizard />
     </div>

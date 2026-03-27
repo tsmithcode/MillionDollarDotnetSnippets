@@ -12,6 +12,8 @@ Use this folder as the operating and adoption hub for the repo.
 - [Adoption Playbook](./adoption-playbook.md)
 - [Use Cases](./UseCases.md)
 - [Architecture](./Architecture.md)
+- [Frontend Foundation](./frontend-foundation.md)
+- [Release Review](./release-review.md)
 - [Highest-ROI Persona](./personas/high-roi-consultant.md)
 - [Highest-ROI Use Cases](./use-cases/highest-roi-use-cases.md)
 - [Product Surface](./product-surface.md)

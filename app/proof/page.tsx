@@ -1,4 +1,6 @@
-import { capabilityCards, proofRecords, proofStats } from "@/lib/site-content";
+import { MotionSection } from "@/components/motion/motion-section";
+import { CapabilityGrid, SectionHeader, SurfacePanel } from "@/components/ui/surfaces";
+import { capabilityCards, marketReasons, proofRecords, proofStats } from "@/lib/site-content";
 
 const traceLines = [
   "Promote urgent work: Applied and set 'Status' to 'Escalated'.",
@@ -9,14 +11,14 @@ const traceLines = [
 export default function ProofPage() {
   return (
     <div className="detail-page">
-      <section className="detail-hero">
+      <MotionSection className="detail-hero proof-hero">
         <p className="eyebrow">Proof surface</p>
         <h2 className="section-title">What the framework proves today in production-like terms.</h2>
         <p className="section-lead">
           The current framework proves a buildable .NET product surface, a golden-path example, rule-by-rule
           diagnostics, and dual ingestion from file and HTTP-backed sources.
         </p>
-      </section>
+      </MotionSection>
 
       <section className="proof-metrics" id="success" aria-label="Framework proof metrics">
         {proofStats.map((stat) => (
@@ -28,7 +30,7 @@ export default function ProofPage() {
         ))}
       </section>
 
-      <section className="proof-layout" id="proof-grid">
+      <section className="proof-layout proof-ledger" id="proof-grid">
         <article className="detail-card" id="architecture">
           <h3>Architecture</h3>
           <ul className="signal-list">
@@ -53,30 +55,29 @@ export default function ProofPage() {
         </article>
       </section>
 
-      <section className="proof-summary" id="capabilities">
+      <SurfacePanel id="capabilities">
         <div className="proof-pill-row" aria-label="Proof highlights">
           <span>File source mode</span>
           <span>HTTP source mode</span>
           <span>Validation issues surfaced</span>
           <span>Queue outcomes shown</span>
         </div>
-        <div className="detail-grid">
+        <CapabilityGrid>
           {capabilityCards.map((card) => (
             <article className="detail-card" key={card.title}>
               <h3>{card.title}</h3>
               <p>{card.detail}</p>
             </article>
           ))}
-        </div>
-      </section>
+        </CapabilityGrid>
+      </SurfacePanel>
 
-      <section className="proof-summary" aria-labelledby="records-heading">
-        <div>
-          <p className="eyebrow">Golden path records</p>
-          <h3 className="section-title" id="records-heading">
-            Two concrete records show what success and failure look like.
-          </h3>
-        </div>
+      <SurfacePanel aria-labelledby="records-heading">
+        <SectionHeader
+          eyebrow="Golden path records"
+          title="Two concrete records show what success and failure look like."
+          titleId="records-heading"
+        />
         <div className="record-grid">
           {proofRecords.map((record) => (
             <article className="record-card" key={record.id}>
@@ -96,7 +97,23 @@ export default function ProofPage() {
             </article>
           ))}
         </div>
-      </section>
+      </SurfacePanel>
+
+      <SurfacePanel aria-labelledby="market-proof-heading">
+        <SectionHeader
+          eyebrow="Market proof"
+          title="Why this proof matters commercially, not just technically."
+          titleId="market-proof-heading"
+        />
+        <div className="leadership-question-grid">
+          {marketReasons.map((item) => (
+            <article className="leadership-question" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </SurfacePanel>
     </div>
   );
 }
