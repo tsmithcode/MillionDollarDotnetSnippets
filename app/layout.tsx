@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { SkipLink } from "@/components/ui/skip-link";
+import { AnnouncementBanner } from "@/components/ui/announcement-banner";
 import { rootMetadata } from "@/lib/metadata";
 import "./globals.css";
 
@@ -28,11 +29,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <a href="/about">About</a>
                 <a href="/proof">Proof</a>
                 <a href="/leadership">Leadership</a>
+                <a href="/town-hall">Town Hall</a>
                 <a aria-label="tsmithcode.ai external" href="https://www.tsmithcode.ai" rel="noreferrer">
                   tsmithcode.ai
                 </a>
               </nav>
             </header>
+            <AnnouncementBanner />
             <main id="content" tabIndex={-1}>
               {children}
             </main>
