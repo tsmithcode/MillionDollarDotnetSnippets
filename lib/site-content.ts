@@ -25,9 +25,32 @@ export type RecommendationRoute = {
   href: string;
   title: string;
   detail: string;
+  confidenceLabel: string;
   allowedReason: string;
+  firstAction: string;
+  nextActionLabel: string;
+  nextActionHref: string;
+  routeSignals: string[];
   blockedReason?: string;
 };
+
+export const guidedReadingPaths = [
+  {
+    title: "Start with proof",
+    audience: "Consultants and engineering leads who need ROI fast.",
+    path: ["/proof", "/about", "/leadership"]
+  },
+  {
+    title: "Start with founder authority",
+    audience: "Strategic readers who need credibility before mechanics.",
+    path: ["/about", "/proof", "/leadership"]
+  },
+  {
+    title: "Start with leadership",
+    audience: "CEO and investor readers who need category, moat, and confidence first.",
+    path: ["/leadership", "/proof", "/about"]
+  }
+];
 
 export const personas: PersonaOption[] = [
   {
@@ -144,6 +167,27 @@ export const proofStats = [
   { label: "Rule trace clarity", value: "Per rule", detail: "Applied and skipped outcomes shown" }
 ];
 
+export const premiumArtifacts = [
+  {
+    title: "Executive review route",
+    detail: "Leadership gets one fast reading path for buyer, moat, release confidence, and current execution standard.",
+    href: "/leadership",
+    label: "Open leadership surface"
+  },
+  {
+    title: "Proof-first evaluation",
+    detail: "Technical readers can inspect diagnostics, ingestion modes, and golden-path outputs before they read narrative.",
+    href: "/proof",
+    label: "Inspect proof surface"
+  },
+  {
+    title: "Founder authority signal",
+    detail: "The about route grounds the framework in enterprise delivery reality rather than abstract positioning language.",
+    href: "/about",
+    label: "Read founder story"
+  }
+];
+
 export const proofRecords = [
   {
     id: "WORK-1001",
@@ -174,8 +218,8 @@ export const leadershipMetrics = [
   },
   {
     label: "Release confidence",
-    value: "9/9 gate checks",
-    detail: "Chromium, WebKit, and mobile flows now pass guided, keyboard, and reduced-motion proof."
+    value: "15/15 gate checks",
+    detail: "Chromium, WebKit, and mobile flows now pass console-clean, guided, keyboard, and reduced-motion proof."
   },
   {
     label: "Founder authority",
@@ -249,7 +293,16 @@ export function buildRecommendation(personaId: string, painId: string, proofId: 
       href: "/about",
       title: "Start with the creator story",
       detail: "You asked for credibility first, so the fastest route is the founder page and the delivery evidence behind it.",
+      confidenceLabel: "Credibility-first route",
       allowedReason: "Founder-first is allowed because you selected creator credibility as the proof layer.",
+      firstAction: "Read the founder story first, then move to proof once the delivery context is clear.",
+      nextActionLabel: "Then review the proof surface",
+      nextActionHref: "/proof",
+      routeSignals: [
+        "Strong fit for executive and investor readers",
+        "Best when founder credibility is part of the buying decision",
+        "Not the fastest path to runtime mechanics"
+      ],
       blockedReason: pain.id === "integrations"
         ? "This path does not show runtime integration proof first. Use the proof page next if you need system behavior before story."
         : undefined
@@ -261,7 +314,16 @@ export function buildRecommendation(personaId: string, painId: string, proofId: 
       href: proof.route,
       title: "Start with the recommended proof path",
       detail: `${persona.recommendation} ${pain.summary}`,
-      allowedReason: "This route matches both your persona and the kind of delivery problem you selected."
+      confidenceLabel: "High-confidence route",
+      allowedReason: "This route matches both your persona and the kind of delivery problem you selected.",
+      firstAction: "Use this page as the fastest first success path, then expand into the supporting surfaces once the value is obvious.",
+      nextActionLabel: proof.id === "architecture" ? "Then review founder authority" : "Then open the leadership review",
+      nextActionHref: proof.id === "architecture" ? "/about" : "/leadership",
+      routeSignals: [
+        "Best fit for your selected persona",
+        "Aligned to your chosen delivery pain",
+        "Designed to show useful proof before deeper reading"
+      ]
     };
   }
 
@@ -269,7 +331,16 @@ export function buildRecommendation(personaId: string, painId: string, proofId: 
     href: pain.route,
     title: "Start with the fastest ROI proof",
     detail: `${pain.summary} Then expand into ${proof.label.toLowerCase()} once you have first success.`,
+    confidenceLabel: "Practical first-step route",
     allowedReason: "This route is allowed because it keeps the first step practical and short for a zero-knowledge user.",
+    firstAction: "Take the shortest path to visible value first, then move into the deeper proof or narrative layer you selected.",
+    nextActionLabel: proof.id === "founder" ? "Then review founder authority" : "Then open your selected proof layer",
+    nextActionHref: proof.route,
+    routeSignals: [
+      "Optimized for first success rather than deepest detail",
+      "Strong for zero-knowledge readers",
+      "Built to reduce early decision fatigue"
+    ],
     blockedReason: personaPrefersProof
       ? undefined
       : `${proof.label} is not the strongest first stop for a ${persona.label.toLowerCase()} solving this specific problem.`

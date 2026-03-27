@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { buildRecommendation, pains, personas, proofs } from "@/lib/site-content";
+import { PageTelemetry, trackTelemetry } from "@/components/telemetry/telemetry-client";
 
 type StepId = "persona" | "pain" | "proof";
 
@@ -31,6 +32,7 @@ export function Wizard() {
 
   return (
     <section className="wizard-panel" id="wizard" aria-labelledby="wizard-title">
+      <PageTelemetry page="wizard" />
       <div className="wizard-header">
         <div>
           <p className="eyebrow">Guided path</p>
@@ -45,7 +47,13 @@ export function Wizard() {
 
             return (
               <li key={step.id} className={isActive ? "active" : isComplete ? "complete" : ""}>
-                <button type="button" onClick={() => setActiveStep(step.id)}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveStep(step.id);
+                    trackTelemetry("wizard_step_changed", { step: step.id, source: "progress_meter" });
+                  }}
+                >
                   <span>{index + 1}</span>
                   {step.label}
                 </button>
@@ -67,6 +75,11 @@ export function Wizard() {
                   onChange={() => {
                     setPersonaId(persona.id);
                     setActiveStep("pain");
+                    trackTelemetry("wizard_selection_changed", {
+                      field: "persona",
+                      value: persona.id,
+                      nextStep: "pain"
+                    });
                   }}
                   type="radio"
                 />
@@ -88,6 +101,11 @@ export function Wizard() {
                   onChange={() => {
                     setPainId(pain.id);
                     setActiveStep("proof");
+                    trackTelemetry("wizard_selection_changed", {
+                      field: "pain",
+                      value: pain.id,
+                      nextStep: "proof"
+                    });
                   }}
                   type="radio"
                 />
@@ -106,7 +124,14 @@ export function Wizard() {
                 <input
                   checked={proof.id === proofId}
                   name="proof"
-                  onChange={() => setProofId(proof.id)}
+                  onChange={() => {
+                    setProofId(proof.id);
+                    trackTelemetry("wizard_selection_changed", {
+                      field: "proof",
+                      value: proof.id,
+                      nextStep: "recommendation"
+                    });
+                  }}
                   type="radio"
                 />
                 <span>
@@ -120,6 +145,7 @@ export function Wizard() {
 
         <aside className="recommendation-panel" aria-live="polite">
           <p className="eyebrow">Recommended path</p>
+          <p className="recommendation-kicker">{recommendation.confidenceLabel}</p>
           <h3>{recommendation.title}</h3>
           <p>{recommendation.detail}</p>
           <dl className="decision-audit">
@@ -140,15 +166,40 @@ export function Wizard() {
             <strong>Why this route is allowed</strong>
             <p>{recommendation.allowedReason}</p>
           </div>
+          <div className="allowed-box route-plan">
+            <strong>What to do first</strong>
+            <p>{recommendation.firstAction}</p>
+          </div>
+          <div className="route-signals" aria-label="Route fit signals">
+            {recommendation.routeSignals.map((signal) => (
+              <span key={signal}>{signal}</span>
+            ))}
+          </div>
           {recommendation.blockedReason ? (
             <div className="blocked-box">
               <strong>What this does not optimize for</strong>
               <p>{recommendation.blockedReason}</p>
             </div>
           ) : null}
-          <a className="primary-action" href={recommendation.href}>
-            Continue to recommended path
-          </a>
+          <div className="recommendation-actions">
+            <a
+              className="primary-action"
+              href={recommendation.href}
+              onClick={() =>
+                trackTelemetry("wizard_recommendation_opened", {
+                  href: recommendation.href,
+                  persona: selectedPersona.id,
+                  pain: selectedPain.id,
+                  proof: selectedProof.id
+                })
+              }
+            >
+              Continue to recommended path
+            </a>
+            <a className="secondary-action" href={recommendation.nextActionHref}>
+              {recommendation.nextActionLabel}
+            </a>
+          </div>
         </aside>
       </div>
     </section>
