@@ -20,6 +20,7 @@ Use this folder as the operating and adoption hub for the repo.
 - [Accessibility Standards](./accessibility.md)
 - [Brand System](./brand-system.md)
 - [Premium Pass Checklist](./premium-pass-checklist.md)
+- [CEO Execution Matrix](./ceo-execution-matrix.md)
 
 ## Team and governance
 
@@ -28,6 +29,7 @@ Use this folder as the operating and adoption hub for the repo.
 - [Operating Model](./operating-model.md)
 - [Acceptance Gates](./acceptance-gates.md)
 - [Role Charters](./roles/README.md)
+- [CEO Execution Matrix](./ceo-execution-matrix.md)
 
 ## Web product implementation
 

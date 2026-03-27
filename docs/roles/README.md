@@ -14,5 +14,9 @@ This folder defines the current enterprise-level specialist team for MillionDoll
 - [Founder Story Systems Lead](./founder-story-systems-lead.md)
 - [Frontend Product Experience Engineer](./frontend-product-experience-engineer.md)
 - [Browser & Device Reliability Engineer](./browser-device-reliability-engineer.md)
+- [Executive Product Operations Lead](./executive-product-operations-lead.md)
+- [Performance Engineering Lead](./performance-engineering-lead.md)
+- [Security and Trust Lead](./security-trust-lead.md)
+- [Investor Narrative and Strategy Lead](./investor-narrative-strategy-lead.md)
 
 Use these documents for hiring, onboarding, and performance calibration.

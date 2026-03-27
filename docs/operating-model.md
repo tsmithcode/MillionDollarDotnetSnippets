@@ -30,6 +30,10 @@ The repo uses domain ownership, not committee ownership.
 - The Founder Story Systems Lead owns founder narrative quality, creator credibility translation, case-study selection, and the link between founder authority and product trust.
 - The Frontend Product Experience Engineer owns the public web experience, guided-framework wizard implementation, responsive interaction quality, and zero-knowledge onboarding flow.
 - The Browser & Device Reliability Engineer owns browser automation, device coverage, preview validation, and release confidence for the public product surface.
+- The Executive Product Operations Lead owns CEO-grade visibility, scorecards, cross-functional execution tracking, and executive release-readiness reporting.
+- The Performance Engineering Lead owns performance budgets, route-level speed discipline, motion and 3D cost control, and mobile runtime quality.
+- The Security and Trust Lead owns public trust posture, deployment hygiene, dependency discipline, and security-related release blockers.
+- The Investor Narrative and Strategy Lead owns investor-legible category framing, moat narrative, strategic proof packaging, and external strategic clarity.
 
 ## Authority Rules
 
@@ -49,6 +53,9 @@ The repo uses domain ownership, not committee ownership.
 - README, narrative, and visual-direction conflicts are resolved by Product, Writer, and Design together, with Product holding final positioning authority.
 - Founder-story conflicts are resolved by Founder Story Systems Lead, Product, and Writer together, with Product holding final positioning authority.
 - Browser, device, and preview-quality release conflicts are resolved by Browser & Device Reliability Engineer and QA together, with release-blocking authority when critical proof is missing.
+- Performance conflicts are resolved by the Performance Engineering Lead and Frontend Product Experience Engineer together, with release-blocking authority when experience quality falls below agreed budgets.
+- Security and trust conflicts are resolved by the Security and Trust Lead and Platform / Release Engineer together, with release-blocking authority when enterprise trust posture is materially weak.
+- Executive reporting and prioritization conflicts are resolved by the Executive Product Operations Lead and Product / Positioning Lead together, with the founder deciding only when mission scope is genuinely in dispute.
 
 ## Weekly Operating Cadence
 

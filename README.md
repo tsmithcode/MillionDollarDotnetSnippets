@@ -218,6 +218,7 @@ Supporting docs:
 - [Accessibility Standards](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/accessibility.md)
 - [Brand System](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/brand-system.md)
 - [Premium Pass Checklist](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/premium-pass-checklist.md)
+- [CEO Execution Matrix](/Users/cadguardianllc/Documents/GitHub/MillionDollarDotnetSnippets/docs/ceo-execution-matrix.md)
 
 ## Team Authority
 
@@ -251,6 +252,10 @@ This repo now assumes enterprise-level ownership across product, code, platform,
 - Founder Story Systems Lead
 - Frontend Product Experience Engineer
 - Browser & Device Reliability Engineer
+- Executive Product Operations Lead
+- Performance Engineering Lead
+- Security and Trust Lead
+- Investor Narrative and Strategy Lead
 
 ## Contributing and Trust
 
