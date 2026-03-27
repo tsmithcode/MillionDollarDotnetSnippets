@@ -226,6 +226,12 @@ PublishScripts/
 csx/
 *.build.csdef
 
+# Next.js and Playwright
+.next/
+test-results/
+playwright-report/
+.vercel/
+
 # Microsoft Azure Emulator
 ecf/
 rcf/
@@ -416,3 +422,4 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+.vercel
