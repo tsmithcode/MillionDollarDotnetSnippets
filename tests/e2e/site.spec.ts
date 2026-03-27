@@ -13,6 +13,8 @@ test.describe("public product surface", () => {
     expect(headers["referrer-policy"]).toBe("strict-origin-when-cross-origin");
     expect(headers["cross-origin-opener-policy"]).toBe("same-origin");
     expect(headers["permissions-policy"]).toContain("camera=()");
+    expect(headers["content-security-policy"]).toContain("script-src 'self' 'nonce-");
+    expect(headers["content-security-policy"]).not.toContain("script-src 'self' 'unsafe-inline'");
     expect(headers["content-security-policy"]).toContain("frame-ancestors 'none'");
     expect(headers["content-security-policy"]).toContain("object-src 'none'");
   });

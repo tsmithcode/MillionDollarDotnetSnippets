@@ -9,7 +9,7 @@ This document defines the current trust posture for the public MDS product surfa
 - `X-Frame-Options: DENY`
 - `Cross-Origin-Opener-Policy: same-origin`
 - `Permissions-Policy` disabling camera, microphone, geolocation, and browsing-topics
-- a baseline `Content-Security-Policy` that blocks framing, object embedding, and cross-origin default execution
+- a nonce-based `Content-Security-Policy` for script execution, plus restrictions on framing, object embedding, and cross-origin default execution
 - `poweredByHeader: false` in Next.js
 
 ## Why this matters
@@ -22,13 +22,13 @@ This document defines the current trust posture for the public MDS product surfa
 
 ## Current limitation
 
-The current Content Security Policy still allows inline script and inline style execution because the App Router runtime needs a simpler compatibility posture today.
+The current Content Security Policy now uses per-request nonces for script execution, but still allows inline styles for App Router compatibility.
 
-That means the current CSP is a meaningful improvement, but not the final form.
+That means script posture is stronger than before, but style posture is not yet at the final standard.
 
 ## Next trust upgrade
 
-- move to nonce-based CSP for scripts and styles
+- extend nonce-based CSP discipline to styles where framework compatibility allows
 - add runtime verification of key response headers in release review
 - add dependency and supply-chain review cadence
 - define enterprise trust sign-off in the release checklist
