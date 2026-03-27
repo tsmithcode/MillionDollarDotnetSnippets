@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { MotionSection } from "@/components/motion/motion-section";
+import { PageTelemetry } from "@/components/telemetry/telemetry-client";
 import { CapabilityGrid, SectionHeader, SurfacePanel } from "@/components/ui/surfaces";
 import { capabilityCards, marketReasons, proofRecords, proofStats } from "@/lib/site-content";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createMetadata({
+  title: "Proof Surface",
+  description:
+    "Production-like proof for Million Dollar Dot Net Snippets: dual-ingestion flow, auditable diagnostics, and leadership-readable technical evidence.",
+  path: "/proof"
+});
 
 const traceLines = [
   "Promote urgent work: Applied and set 'Status' to 'Escalated'.",
@@ -11,6 +21,7 @@ const traceLines = [
 export default function ProofPage() {
   return (
     <div className="detail-page">
+      <PageTelemetry page="proof" />
       <MotionSection className="detail-hero proof-hero">
         <p className="eyebrow">Proof surface</p>
         <h2 className="section-title">What the framework proves today in production-like terms.</h2>
@@ -112,6 +123,24 @@ export default function ProofPage() {
               <p>{item.detail}</p>
             </article>
           ))}
+        </div>
+      </SurfacePanel>
+
+      <SurfacePanel aria-labelledby="next-reading-heading">
+        <SectionHeader
+          eyebrow="Guided next step"
+          title="The proof page should lead somewhere, not end the story."
+          titleId="next-reading-heading"
+        />
+        <div className="leadership-question-grid">
+          <article className="leadership-question">
+            <h3>If the proof convinced you</h3>
+            <p>Next read the founder page to understand why these delivery patterns exist and why they are credible.</p>
+          </article>
+          <article className="leadership-question">
+            <h3>If you need the executive view</h3>
+            <p>Then open leadership to see the buyer, category, moat, and release confidence in one reading path.</p>
+          </article>
         </div>
       </SurfacePanel>
     </div>

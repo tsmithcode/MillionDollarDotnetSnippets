@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { MotionSection } from "@/components/motion/motion-section";
+import { guidedReadingPaths } from "@/lib/site-content";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createMetadata({
+  title: "About Thomas Smith",
+  description:
+    "Founder story and delivery credibility behind Million Dollar Dot Net Snippets and the framework wizard product surface.",
+  path: "/about"
+});
 
 export default function AboutPage() {
   return (
@@ -73,6 +83,16 @@ export default function AboutPage() {
             trajectory into one page so strategic review does not depend on technical inference.
           </p>
         </article>
+      </section>
+
+      <section className="founder-visibility" aria-label="Guided founder reading paths">
+        {guidedReadingPaths.map((path) => (
+          <article className="story-panel" key={path.title}>
+            <p className="eyebrow">{path.title}</p>
+            <h3>{path.audience}</h3>
+            <p>{path.path.join(" -> ")}</p>
+          </article>
+        ))}
       </section>
     </div>
   );

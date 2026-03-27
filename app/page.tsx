@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import { HeroStage } from "@/components/three/hero-stage";
 import { MotionSection } from "@/components/motion/motion-section";
 import { StaggerGroup, StaggerItem } from "@/components/motion/stagger-group";
 import { ButtonLink } from "@/components/ui/button-link";
-import { capabilityCards, leadershipMetrics, proofStats } from "@/lib/site-content";
+import { capabilityCards, leadershipMetrics, premiumArtifacts, proofStats } from "@/lib/site-content";
 import { Wizard } from "@/components/wizard";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createMetadata({
+  title: "Framework Wizard",
+  description:
+    "A guided, premium product surface for Million Dollar Dot Net Snippets with role-aware onboarding, proof, and leadership review.",
+  path: "/"
+});
 
 export default function HomePage() {
   return (
@@ -135,6 +144,29 @@ export default function HomePage() {
               <span>{item.label}</span>
               <h3>{item.value}</h3>
               <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </MotionSection>
+
+      <MotionSection className="artifact-band" delay={0.18}>
+        <div className="editorial-intro">
+          <p className="eyebrow">Premium artifact system</p>
+          <h2 className="section-title">Every high-value route now behaves like part of one launch-grade product narrative.</h2>
+          <p className="section-lead">
+            The homepage, proof surface, founder story, and leadership review now double as executive artifacts,
+            shareable surfaces, and adoption paths.
+          </p>
+        </div>
+        <div className="artifact-grid">
+          {premiumArtifacts.map((artifact) => (
+            <article className="artifact-card" key={artifact.title}>
+              <p className="eyebrow">Launch-ready</p>
+              <h3>{artifact.title}</h3>
+              <p>{artifact.detail}</p>
+              <ButtonLink href={artifact.href} tone="secondary">
+                {artifact.label}
+              </ButtonLink>
             </article>
           ))}
         </div>

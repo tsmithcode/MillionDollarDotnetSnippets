@@ -12,9 +12,13 @@ Use this folder as the operating and adoption hub for the repo.
 - [Adoption Playbook](./adoption-playbook.md)
 - [Use Cases](./UseCases.md)
 - [Architecture](./Architecture.md)
+- [Architecture Truth Pass](./architecture-truth-pass.md)
 - [Frontend Foundation](./frontend-foundation.md)
 - [Performance Budget Baseline](./performance-budget-baseline.md)
 - [Release Review](./release-review.md)
+- [Trust and Accessibility Pass](./trust-accessibility-pass.md)
+- [Premium Systems and Asset Pass](./premium-systems-asset-pass.md)
+- [Telemetry Foundation](./telemetry-foundation.md)
 - [Highest-ROI Persona](./personas/high-roi-consultant.md)
 - [Highest-ROI Use Cases](./use-cases/highest-roi-use-cases.md)
 - [Product Surface](./product-surface.md)
@@ -23,6 +27,7 @@ Use this folder as the operating and adoption hub for the repo.
 - [Brand System](./brand-system.md)
 - [Premium Pass Checklist](./premium-pass-checklist.md)
 - [CEO Execution Matrix](./ceo-execution-matrix.md)
+- [Sovereign Expert Consultation](./sovereign-expert-consultation.md)
 
 ## Team and governance
 
@@ -32,6 +37,7 @@ Use this folder as the operating and adoption hub for the repo.
 - [Acceptance Gates](./acceptance-gates.md)
 - [Role Charters](./roles/README.md)
 - [CEO Execution Matrix](./ceo-execution-matrix.md)
+- [Sovereign Expert Consultation](./sovereign-expert-consultation.md)
 
 ## Web product implementation
 

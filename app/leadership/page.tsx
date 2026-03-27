@@ -1,10 +1,21 @@
+import type { Metadata } from "next";
 import { MotionSection } from "@/components/motion/motion-section";
+import { PageTelemetry } from "@/components/telemetry/telemetry-client";
 import { SurfacePanel } from "@/components/ui/surfaces";
 import { leadershipMetrics, leadershipQuestions, leadershipTimeline, marketReasons } from "@/lib/site-content";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createMetadata({
+  title: "Leadership Review",
+  description:
+    "Executive review surface for Million Dollar Dot Net Snippets covering buyer fit, market reasons, release confidence, and execution trajectory.",
+  path: "/leadership"
+});
 
 export default function LeadershipPage() {
   return (
     <div className="detail-page leadership-page">
+      <PageTelemetry page="leadership" />
       <MotionSection className="detail-hero leadership-hero">
         <p className="eyebrow">Leadership review</p>
         <h2 className="section-title">One executive surface for product truth, market fit, and release confidence.</h2>
@@ -86,6 +97,29 @@ export default function LeadershipPage() {
               <p>{item.detail}</p>
             </article>
           ))}
+        </div>
+      </SurfacePanel>
+
+      <SurfacePanel aria-labelledby="leadership-reading-path-title">
+        <div className="leadership-intro">
+          <p className="eyebrow">Guided reading path</p>
+          <h2 className="section-title" id="leadership-reading-path-title">
+            The shortest high-confidence sequence for strategic readers.
+          </h2>
+        </div>
+        <div className="leadership-question-grid">
+          <article className="leadership-question">
+            <h3>1. Leadership</h3>
+            <p>Understand category, buyer, moat, and current release confidence.</p>
+          </article>
+          <article className="leadership-question">
+            <h3>2. Proof</h3>
+            <p>Validate that the product has real technical evidence behind the narrative.</p>
+          </article>
+          <article className="leadership-question">
+            <h3>3. Founder</h3>
+            <p>Confirm that the product is grounded in delivery experience rather than presentation alone.</p>
+          </article>
         </div>
       </SurfacePanel>
     </div>
