@@ -18,6 +18,7 @@ Use this folder as the operating and adoption hub for the repo.
 - [Highest-ROI Use Cases](./use-cases/highest-roi-use-cases.md)
 - [Product Surface](./product-surface.md)
 - [Accessibility Standards](./accessibility.md)
+- [Security and Trust Baseline](./security-trust-baseline.md)
 - [Brand System](./brand-system.md)
 - [Premium Pass Checklist](./premium-pass-checklist.md)
 - [CEO Execution Matrix](./ceo-execution-matrix.md)

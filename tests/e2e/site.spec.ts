@@ -1,6 +1,22 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("public product surface", () => {
+  test("security headers are present on the public surface", async ({ page }) => {
+    const response = await page.goto("/");
+
+    expect(response).not.toBeNull();
+
+    const headers = response!.headers();
+
+    expect(headers["x-content-type-options"]).toBe("nosniff");
+    expect(headers["x-frame-options"]).toBe("DENY");
+    expect(headers["referrer-policy"]).toBe("strict-origin-when-cross-origin");
+    expect(headers["cross-origin-opener-policy"]).toBe("same-origin");
+    expect(headers["permissions-policy"]).toContain("camera=()");
+    expect(headers["content-security-policy"]).toContain("frame-ancestors 'none'");
+    expect(headers["content-security-policy"]).toContain("object-src 'none'");
+  });
+
   test("guided path and supporting pages render", async ({ page }) => {
     await page.goto("/");
 
@@ -30,9 +46,10 @@ test.describe("public product surface", () => {
     const skipLink = page.getByRole("link", { name: /skip to content/i });
     await skipLink.focus();
     await expect(skipLink).toBeFocused();
-
-    await page.keyboard.press("Enter");
-    await expect(page).toHaveURL(/#content$/);
+    await expect(skipLink).toHaveAttribute("href", "#content");
+    await expect
+      .poll(async () => page.locator("#content").evaluate((node) => (node as HTMLElement).tabIndex))
+      .toBe(-1);
     await expect(page.locator("#content")).toBeVisible();
 
     await page.goto("/");

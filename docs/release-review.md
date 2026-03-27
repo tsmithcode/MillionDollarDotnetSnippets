@@ -17,11 +17,13 @@ This document defines the manual release review expectations for the MDS web pro
 - 3D stage does not block interaction or distort layout
 - primary CTA remains obvious
 - founder and proof pages still feel aligned to the homepage narrative
+- trust posture remains aligned with the documented security baseline
 
 ## Automated review expectations
 
 - production build passes
 - Playwright suite passes across Chromium, WebKit, mobile, and reduced-motion project
+- security headers are present on the public product surface
 - failure artifacts are retained for screenshots, traces, and video
 
 ## Release blocker rule

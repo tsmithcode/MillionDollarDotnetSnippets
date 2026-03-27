@@ -35,7 +35,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <a href="https://www.tsmithcode.ai">tsmithcode.ai</a>
               </nav>
             </header>
-            <main id="content">{children}</main>
+            <main id="content" tabIndex={-1}>
+              {children}
+            </main>
           </div>
         </MotionProvider>
       </body>
