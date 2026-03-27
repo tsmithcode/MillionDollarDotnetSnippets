@@ -264,9 +264,55 @@ a {
   border-radius: 1.4rem;
   overflow: hidden;
   border: 1px solid var(--line);
+  position: relative;
   background:
     radial-gradient(circle at top, rgba(242, 209, 159, 0.16), transparent 35%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+}
+
+.stage-shell--fallback {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.35rem;
+  min-height: 320px;
+}
+
+.stage-fallback-copy {
+  max-width: 28rem;
+}
+
+.stage-fallback-copy h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1;
+}
+
+.stage-fallback-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.stage-fallback-mark {
+  width: 118px;
+  height: 118px;
+  border-radius: 1.8rem;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.45), transparent 28%),
+    linear-gradient(145deg, #ffd18c, #b7742d);
+  box-shadow: var(--shadow);
+}
+
+.stage-fallback-mark span {
+  color: #120d08;
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .three-caption {
@@ -277,6 +323,10 @@ a {
   padding: 0.5rem 0.8rem;
   font-size: 0.8rem;
   white-space: nowrap;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1;
 }
 
 .editorial-band-immersive,
@@ -838,6 +888,16 @@ a {
 
   .stage-shell {
     min-height: 260px;
+  }
+
+  .stage-shell--fallback {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .stage-fallback-mark {
+    width: 92px;
+    height: 92px;
   }
 }
 

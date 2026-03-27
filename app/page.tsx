@@ -1,4 +1,4 @@
-import { CanvasStage } from "@/components/three/canvas-stage";
+import { HeroStage } from "@/components/three/hero-stage";
 import { MotionSection } from "@/components/motion/motion-section";
 import { StaggerGroup, StaggerItem } from "@/components/motion/stagger-group";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -44,7 +44,7 @@ export default function HomePage() {
               </StaggerItem>
             ))}
           </StaggerGroup>
-          <CanvasStage />
+          <HeroStage />
         </div>
       </MotionSection>
 
