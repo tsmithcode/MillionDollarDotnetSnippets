@@ -8,8 +8,10 @@ This document defines the current trust posture for the public MDS product surfa
 - `Referrer-Policy: strict-origin-when-cross-origin`
 - `X-Frame-Options: DENY`
 - `Cross-Origin-Opener-Policy: same-origin`
+- `Cross-Origin-Resource-Policy: same-origin`
+- `Origin-Agent-Cluster: ?1`
 - `Permissions-Policy` disabling camera, microphone, geolocation, and browsing-topics
-- a nonce-based `Content-Security-Policy` for script execution, plus restrictions on framing, object embedding, and cross-origin default execution
+- a compatibility-hardened `Content-Security-Policy` with inline script and style allowance for the current Next.js runtime plus restrictions on framing and object embedding
 - `poweredByHeader: false` in Next.js
 
 ## Why this matters
@@ -18,17 +20,19 @@ This document defines the current trust posture for the public MDS product surfa
 - framing and object-embedding abuse paths are closed
 - MIME sniffing is disabled
 - browser capability access is denied by default
+- origin isolation and cross-origin resource boundaries are more explicit
 - trust posture becomes part of release quality, not hidden infrastructure trivia
 
 ## Current limitation
 
-The current Content Security Policy now uses per-request nonces for script execution, but still allows inline styles for App Router compatibility.
+The current Content Security Policy allows inline scripts and styles for App Router compatibility and runtime reliability.
 
-That means script posture is stronger than before, but style posture is not yet at the final standard.
+That means the site currently favors stable production execution plus explicit documentation over a stricter script posture that would degrade the user experience.
 
 ## Next trust upgrade
 
-- extend nonce-based CSP discipline to styles where framework compatibility allows
+- remove inline script allowance once the runtime can support a stricter CSP without breaking hydration or route interactivity
+- tighten script posture with hashes or nonce-compatible rendering once framework support is stable
 - add runtime verification of key response headers in release review
 - add dependency and supply-chain review cadence
 - define enterprise trust sign-off in the release checklist

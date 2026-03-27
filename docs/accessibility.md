@@ -23,6 +23,14 @@ Million Dollar Dot Net Snippets should feel premium without sacrificing readabil
 - long docs should have clear headings
 - critical docs should have one obvious starting point
 
+## Web product standards
+
+- skip links must move focus into the main content region
+- external links should disclose that they leave the current product surface
+- reduced-motion mode must preserve meaning, not just suppress animation
+- desktop and mobile keyboard paths are both part of release proof
+- guided flows should explain why a route is recommended and what to do next
+
 ## Ownership
 
 - Design / Brand Systems Lead owns visual accessibility

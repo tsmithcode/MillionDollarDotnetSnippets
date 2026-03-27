@@ -1,38 +1,25 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-function createNonce() {
-  return btoa(crypto.randomUUID()).replace(/=+$/g, "");
-}
-
-function buildCsp(nonce: string) {
+function buildCsp() {
   return [
     "default-src 'self'",
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
     "object-src 'none'",
-    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'`,
+    "script-src 'self' 'unsafe-inline'",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https:",
     "font-src 'self' data:",
-    "connect-src 'self' https:",
-    "upgrade-insecure-requests"
+    "connect-src 'self' https:"
   ].join("; ");
 }
 
 export function middleware(request: NextRequest) {
-  const nonce = createNonce();
-  const csp = buildCsp(nonce);
+  const csp = buildCsp();
 
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set("x-nonce", nonce);
-
-  const response = NextResponse.next({
-    request: {
-      headers: requestHeaders
-    }
-  });
+  const response = NextResponse.next();
 
   response.headers.set("Content-Security-Policy", csp);
 

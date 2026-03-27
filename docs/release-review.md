@@ -18,6 +18,8 @@ This document defines the manual release review expectations for the MDS web pro
 - primary CTA remains obvious
 - founder and proof pages still feel aligned to the homepage narrative
 - trust posture remains aligned with the documented security baseline
+- skip-link interaction moves focus into main content
+- external navigation is clearly disclosed
 
 ## Automated review expectations
 
@@ -25,6 +27,7 @@ This document defines the manual release review expectations for the MDS web pro
 - performance budgets pass
 - Playwright suite passes across Chromium, WebKit, mobile, and reduced-motion project
 - security headers are present on the public product surface
+- external-link disclosure and skip-link focus behavior are covered by the browser gate
 - failure artifacts are retained for screenshots, traces, and video
 
 ## Release blocker rule

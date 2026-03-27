@@ -20,6 +20,14 @@ const securityHeaders = [
   {
     key: "Cross-Origin-Opener-Policy",
     value: "same-origin"
+  },
+  {
+    key: "Cross-Origin-Resource-Policy",
+    value: "same-origin"
+  },
+  {
+    key: "Origin-Agent-Cluster",
+    value: "?1"
   }
 ] as const;
 

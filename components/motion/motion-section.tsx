@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { m, useReducedMotion } from "framer-motion";
 
 export function MotionSection({
@@ -12,8 +13,13 @@ export function MotionSection({
   delay?: number;
 }>) {
   const reduceMotion = useReducedMotion();
+  const [hasMounted, setHasMounted] = useState(false);
 
-  if (reduceMotion) {
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (reduceMotion || !hasMounted) {
     return <section className={className}>{children}</section>;
   }
 

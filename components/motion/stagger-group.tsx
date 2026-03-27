@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { m, useReducedMotion } from "framer-motion";
 
 export function StaggerGroup({
@@ -10,8 +11,13 @@ export function StaggerGroup({
   className?: string;
 }>) {
   const reduceMotion = useReducedMotion();
+  const [hasMounted, setHasMounted] = useState(false);
 
-  if (reduceMotion) {
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (reduceMotion || !hasMounted) {
     return <div className={className}>{children}</div>;
   }
 
@@ -44,8 +50,13 @@ export function StaggerItem({
   className?: string;
 }>) {
   const reduceMotion = useReducedMotion();
+  const [hasMounted, setHasMounted] = useState(false);
 
-  if (reduceMotion) {
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (reduceMotion || !hasMounted) {
     return <div className={className}>{children}</div>;
   }
 
