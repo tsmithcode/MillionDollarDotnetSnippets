@@ -22,6 +22,7 @@ This document defines the manual release review expectations for the MDS web pro
 ## Automated review expectations
 
 - production build passes
+- performance budgets pass
 - Playwright suite passes across Chromium, WebKit, mobile, and reduced-motion project
 - security headers are present on the public product surface
 - failure artifacts are retained for screenshots, traces, and video

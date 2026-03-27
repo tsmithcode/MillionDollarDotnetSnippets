@@ -13,6 +13,7 @@ Use this folder as the operating and adoption hub for the repo.
 - [Use Cases](./UseCases.md)
 - [Architecture](./Architecture.md)
 - [Frontend Foundation](./frontend-foundation.md)
+- [Performance Budget Baseline](./performance-budget-baseline.md)
 - [Release Review](./release-review.md)
 - [Highest-ROI Persona](./personas/high-roi-consultant.md)
 - [Highest-ROI Use Cases](./use-cases/highest-roi-use-cases.md)

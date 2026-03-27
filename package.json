@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check:performance-budgets": "node scripts/check-performance-budgets.mjs",
     "start": "next start",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed"
